@@ -18,8 +18,11 @@ export default function RootLayout({
 	});
 
 	return (
-		<html lang='en'>
-			<body className='bg-cyan-50 flex col'>
+		<html
+			className='no-scrollbar'
+			lang='en'
+		>
+			<body className='bg-cyan-50 flex col '>
 				<Header />
 				<div id='smooth-content'>
 					{children}
