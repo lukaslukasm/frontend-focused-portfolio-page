@@ -1,26 +1,36 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+	--color-text: var(--color-gray-600);
+	--color-primary: var(--color-cyan-500);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@layer base {
+	body > * {
+		@apply text-gray-950;
+	}
+	body {
+		overflow-x: hidden;
+	}
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@utility flex-center {
+	@apply flex items-center justify-center;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility col {
+	@apply flex flex-col;
+}
+
+@utility placeholder-elm {
+	@apply uppercase font-black text-cyan-50 tracking-tighter text-3xl;
+}
+
+.topic-badge {
+	@apply font-black text-base;
+}
+
+.splide__track,
+.splide__track ul {
+	@apply !overflow-visible;
 }
