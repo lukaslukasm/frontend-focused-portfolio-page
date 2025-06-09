@@ -1,45 +1,50 @@
 @import 'tailwindcss';
 
 @theme {
-	--color-text: var(--color-gray-600);
-	--color-primary: var(--color-cyan-500);
+  --color-text: var(--color-gray-600);
+  --color-primary: var(--color-cyan-500);
 }
 
 @layer base {
-	body > * {
-		@apply text-gray-950;
-	}
-	body {
-		overflow-x: hidden;
-	}
+  section {
+    padding: 0 1rem;
+    overflow-x: hidden;
+  }
 
-	.no-scrollbar::-webkit-scrollbar {
-		display: none;
-	}
+  body > * {
+    @apply text-gray-950;
+  }
+  body {
+    overflow-x: hidden;
+  }
 
-	.no-scrollbar {
-		-ms-overflow-style: none;
-		scrollbar-width: none;
-	}
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 @utility flex-center {
-	@apply flex items-center justify-center;
+  @apply flex items-center justify-center;
 }
 
 @utility col {
-	@apply flex flex-col;
+  @apply flex flex-col;
 }
 
 @utility placeholder-elm {
-	@apply uppercase font-black text-cyan-50 tracking-tighter text-3xl;
+  @apply text-3xl font-black tracking-tighter text-cyan-50 uppercase;
 }
 
 .topic-badge {
-	@apply font-black text-base;
+  @apply text-base font-black;
 }
 
 .splide__track,
 .splide__track ul {
-	@apply !overflow-visible;
+  @apply !overflow-visible;
 }

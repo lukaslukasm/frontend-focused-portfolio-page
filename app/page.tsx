@@ -6,12 +6,12 @@ import Intro from '@/components/Intro';
 // import ShowcaseFeatures from '@/components/ShowcaseFeatures';
 
 function Page() {
-	return (
-		<main className='max-w-[min(90rem,100%)] mx-auto px-4 w-full flex-center col'>
-			<Hero />
-			<Intro />
-			{/* <ShowcaseFeatures /> */}
-		</main>
-	);
+  return (
+    <main className="flex-center col mx-auto w-full max-w-[min(90rem,100%)]">
+      <Hero />
+      <Intro />
+      {/* <ShowcaseFeatures /> */}
+    </main>
+  );
 }
 export default Page;
