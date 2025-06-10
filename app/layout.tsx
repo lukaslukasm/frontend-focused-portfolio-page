@@ -7,28 +7,25 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	useGSAP(() => {
-		ScrollSmoother.create({
-			smooth: 1,
-		});
-	});
+  useGSAP(() => {
+    ScrollSmoother.create({
+      smooth: 1,
+    });
+  });
 
-	return (
-		<html
-			className='no-scrollbar'
-			lang='en'
-		>
-			<body className='bg-cyan-50 flex col '>
-				<Header />
-				<div id='smooth-content'>
-					{children}
-					<Footer />
-				</div>
-			</body>
-		</html>
-	);
+  return (
+    <html className="no-scrollbar max-w-screen overflow-x-hidden" lang="en">
+      <body className="col flex w-full bg-cyan-50">
+        <Header />
+        <div id="smooth-content">
+          {children}
+          <Footer />
+        </div>
+      </body>
+    </html>
+  );
 }
