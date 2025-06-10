@@ -3,6 +3,7 @@
 @theme {
   --color-text: var(--color-gray-600);
   --color-primary: var(--color-cyan-500);
+  --responsive-gutter-width: calc(((100vw - 1440px + 2rem) / 2));
 }
 
 @layer base {
