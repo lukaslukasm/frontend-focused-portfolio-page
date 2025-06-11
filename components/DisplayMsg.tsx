@@ -1,6 +1,13 @@
 import { cn } from '@/utils/cn';
 import { ReactNode } from 'react';
 
+type DisplayMsgProps = {
+  children: ReactNode;
+  category?: string;
+  categoryColorCN?: string;
+  className?: string;
+};
+
 /**
  * Big message with optional category label above. Main usage: Headings wrap.
  *
@@ -17,12 +24,7 @@ export default function DisplayMsg({
   category,
   categoryColorCN = 'text-primary',
   className = '',
-}: {
-  children: ReactNode;
-  category?: string;
-  categoryColorCN?: string;
-  className?: string;
-}) {
+}: DisplayMsgProps) {
   return (
     <div
       className={cn(
