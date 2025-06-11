@@ -3,13 +3,15 @@
 @theme {
   --color-text: var(--color-gray-600);
   --color-primary: var(--color-cyan-500);
-  --responsive-gutter-width: calc(((100vw - 1440px + 2rem) / 2));
+  --responsive-gutter-width: max(calc(((100vw - 1440px + 2rem) / 2)), 1rem);
 }
 
 @layer base {
   section {
     padding: 0 1rem;
     overflow-x: hidden;
+    margin: 0 auto;
+    width: min(90rem, 100%);
   }
 
   body > * {

@@ -6,7 +6,7 @@ import ShowcaseFeatures from '@/components/ShowcaseFeatures';
 
 function Page() {
   return (
-    <main className="flex-center col mx-auto w-full max-w-[min(90rem,100%)]">
+    <main className="flex-center col w-full">
       <Hero />
       <Intro />
       <ShowcaseFeatures />

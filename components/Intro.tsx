@@ -99,7 +99,7 @@ function Intro() {
     <>
       <section
         ref={introRef}
-        className="flex-center relative flex h-screen w-full overflow-y-hidden"
+        className="flex-center relative flex h-screen overflow-y-hidden"
       >
         <DisplayMsg
           category="Skill"
