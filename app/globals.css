@@ -3,17 +3,21 @@
 @theme {
   --color-text: var(--color-gray-600);
   --color-primary: var(--color-cyan-500);
+  --responsive-gutter-width: max(calc(((100vw - 1440px + 2rem) / 2)), 1rem);
 }
 
 @layer base {
   section {
     padding: 0 1rem;
     overflow-x: hidden;
+    margin: 0 auto;
+    width: min(90rem, 100%);
   }
 
   body > * {
-    @apply text-gray-950;
+    @apply text-gray-800;
   }
+
   body {
     overflow-x: hidden;
   }
@@ -25,6 +29,20 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .carousel-slide {
+    & h3 {
+      @apply text-2xl sm:text-4xl;
+    }
+
+    & p {
+      @apply text-sm sm:text-lg;
+    }
+
+    & img {
+      @apply mx-auto rounded-3xl;
+    }
   }
 }
 

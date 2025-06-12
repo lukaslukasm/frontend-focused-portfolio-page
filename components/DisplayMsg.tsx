@@ -1,8 +1,15 @@
 import { cn } from '@/utils/cn';
 import { ReactNode } from 'react';
 
+type DisplayMsgProps = {
+  children: ReactNode;
+  category?: string;
+  categoryClassName?: string;
+  className?: string;
+};
+
 /**
- * Big message with optional category label above. Main usage: Headings wrap.
+ * Big message with optional small text above. Main usage: Headings wrap.
  *
  * @param children - Required, content to be displayed inside.
  * @param category - Optional label above the heading.
@@ -15,20 +22,17 @@ import { ReactNode } from 'react';
 export default function DisplayMsg({
   children,
   category,
-  categoryColorCN = 'text-primary',
+  categoryClassName = '',
   className = '',
-}: {
-  children: ReactNode;
-  category?: string;
-  categoryColorCN?: string;
-  className?: string;
-}) {
+}: DisplayMsgProps) {
   return (
     <div
       className={cn(
         'text-text',
         'font-bold',
         'relative',
+        'flex',
+        'col',
         'text-4xl',
         'sm:text-6xl',
         className,
@@ -37,15 +41,14 @@ export default function DisplayMsg({
       {!!category && (
         <span
           className={cn(
-            'absolute',
             'skill',
-            '-top-3',
-            'sm:-top-4',
             'left-0',
+            'text-primary',
+            '-mb-1',
             'sm:text-base',
             'text-xs',
             'font-black',
-            categoryColorCN,
+            categoryClassName,
           )}
         >
           {category}
