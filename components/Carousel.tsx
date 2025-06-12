@@ -108,15 +108,15 @@ function Carousel({ children }: CarouselProps) {
       {/* the carousel */}
       <div
         ref={scrollRef}
-        className="no-scrollbar flex h-[25rem] w-full snap-x snap-mandatory scroll-px-[var(--responsive-gutter-width)] overflow-x-scroll scroll-smooth py-3 sm:left-0 sm:h-[43rem]"
+        className="no-scrollbar flex w-full snap-x snap-mandatory scroll-px-[var(--responsive-gutter-width)] overflow-x-scroll scroll-smooth py-3 pb-10 sm:left-0 sm:h-[43rem]"
       >
-        <ul className="carousel-track flex h-full w-max gap-4 px-[var(--responsive-gutter-width)] sm:gap-8">
+        <ul className="carousel-track grid h-full w-max grid-cols-[repeat(5,260px)] items-stretch gap-4 px-[var(--responsive-gutter-width)] sm:gap-8">
           {!!children && children}
         </ul>
       </div>
 
       {/* arrows navigation */}
-      <div className="mt-4 mr-[var(--responsive-gutter-width)] flex justify-center gap-4 self-end sm:mt-8">
+      <div className="carousel-arrows-nav mr-[var(--responsive-gutter-width)] flex translate-y-8 justify-center gap-4 self-end opacity-0">
         <button
           onClick={() => scrollByCard('left')}
           disabled={disabledArrow === 'prev'}

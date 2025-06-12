@@ -17,13 +17,24 @@ function CarouselSlide({ children, className = '' }: CarouselSlideProps) {
   return (
     <li
       className={cn(
-        'aspect-[3/5]',
+        'carousel-slide',
+        'sm:aspect-[3/5]',
         'h-full',
+        'relative',
+        'flex',
+        'col',
+        'sm:p-8',
+        'p-4',
+        'sm:gap-4',
+        'gap-3',
         'snap-start',
+        'select-none',
+        'overflow-hidden',
         'rounded-3xl',
         'bg-white',
         'drop-shadow-lg',
-        'sm:aspect-[1/2]',
+        'opacity-0',
+        'translate-y-8',
         className,
       )}
     >
