@@ -19,8 +19,9 @@ function CarouselSlide({ children, className = '' }: CarouselSlideProps) {
       className={cn(
         'carousel-slide',
         'sm:aspect-[3/5]',
-        'h-full',
         'relative',
+        'sm:w-88',
+        'w-64',
         'flex',
         'col',
         'sm:p-8',

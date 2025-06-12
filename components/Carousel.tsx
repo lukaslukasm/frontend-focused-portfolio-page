@@ -108,9 +108,9 @@ function Carousel({ children }: CarouselProps) {
       {/* the carousel */}
       <div
         ref={scrollRef}
-        className="no-scrollbar flex w-full snap-x snap-mandatory scroll-px-[var(--responsive-gutter-width)] overflow-x-scroll scroll-smooth py-3 pb-10 sm:left-0 sm:h-[43rem]"
+        className="no-scrollbar flex w-full snap-x snap-mandatory scroll-px-[var(--responsive-gutter-width)] overflow-x-scroll scroll-smooth py-3 pb-10 sm:left-0"
       >
-        <ul className="carousel-track grid h-full w-max grid-cols-[repeat(5,260px)] items-stretch gap-4 px-[var(--responsive-gutter-width)] sm:gap-8">
+        <ul className="carousel-track flex h-full w-max grid-cols-[repeat(5,260px)] items-stretch gap-4 px-[var(--responsive-gutter-width)] sm:gap-8">
           {!!children && children}
         </ul>
       </div>

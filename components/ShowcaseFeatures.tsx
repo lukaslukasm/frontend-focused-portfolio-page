@@ -56,7 +56,7 @@ function ShowcaseFeatures() {
             alt=""
           />
         </CarouselSlide>
-        <CarouselSlide className="bg-transparent p-0 drop-shadow-none">
+        <CarouselSlide className="bg-transparent !p-0 drop-shadow-none">
           <img
             src="https://www.apple.com/v/os/a/images/shared/liquid_glass/focus__ggpbjiev9i62_large.jpg"
             alt=""
