@@ -16,6 +16,9 @@ type CarouselSlideProps = {
 function CarouselSlide({ children, className = '' }: CarouselSlideProps) {
   return (
     <li
+      role="group"
+      aria-roledescription="slide"
+      aria-label="slide"
       className={cn(
         'carousel-slide',
         'sm:aspect-[3/5]',

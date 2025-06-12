@@ -123,7 +123,12 @@ function Carousel({ children, className = '' }: CarouselProps) {
         ref={scrollRef}
         className="no-scrollbar pointer-events-auto flex w-full snap-x snap-mandatory scroll-px-[var(--responsive-gutter-width)] overflow-x-scroll scroll-smooth py-3 pb-10"
       >
-        <ul className="carousel-track flex h-full w-max grid-cols-[repeat(5,260px)] items-stretch gap-4 px-[var(--responsive-gutter-width)] sm:gap-8">
+        <ul
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Feature highlights"
+          className="carousel-track flex h-full w-max grid-cols-[repeat(5,260px)] items-stretch gap-4 px-[var(--responsive-gutter-width)] sm:gap-8"
+        >
           {!!children && children}
         </ul>
       </div>
@@ -131,6 +136,9 @@ function Carousel({ children, className = '' }: CarouselProps) {
       {/* arrows navigation */}
       <div className="carousel-arrows-nav pointer-events-auto mr-[var(--responsive-gutter-width)] flex justify-center gap-4 self-end">
         <button
+          type="button"
+          aria-label="Previous slide"
+          aria-controls="carousel-list"
           onClick={() => scrollByCard('left')}
           disabled={disabledArrow === 'prev'}
           className="rounded-full bg-gray-200 p-2 transition-all hover:bg-gray-300 disabled:opacity-50"
@@ -144,6 +152,9 @@ function Carousel({ children, className = '' }: CarouselProps) {
           </svg>
         </button>
         <button
+          type="button"
+          aria-label="Next slide"
+          aria-controls="carousel-list"
           onClick={() => scrollByCard('right')}
           disabled={disabledArrow === 'next'}
           className="rounded-full bg-gray-200 p-2 transition-all hover:bg-gray-300 disabled:opacity-50"
