@@ -45,9 +45,9 @@ function ShowcaseFeatures() {
       >
         <h2>Showcase - features</h2>
       </DisplayMsg>
-      <Carousel>
+      <Carousel className="[&_.carousel-arrows-nav]:translate-y-8 [&_.carousel-arrows-nav]:opacity-0 [&_.carousel-slide]:translate-y-8 [&_.carousel-slide]:opacity-0">
         <CarouselSlide className="bg-blue-50">
-          <DisplayMsg category="Technology" categoryClassName="font-semibold">
+          <DisplayMsg category="Technology" categoryClassName="opacity-50">
             <h3>Stunning Shots</h3>
           </DisplayMsg>
           <div className="flex-grow"></div>
@@ -75,7 +75,7 @@ function ShowcaseFeatures() {
         <CarouselSlide className="bg-yellow-300">
           <DisplayMsg
             category="Entertainment"
-            categoryClassName="font-semibold text-white"
+            categoryClassName=" text-white/50"
           >
             <h3 className="text-white">Traumatised kids</h3>
           </DisplayMsg>
@@ -94,7 +94,7 @@ function ShowcaseFeatures() {
           <DisplayMsg
             category="Precision"
             className="relative z-10"
-            categoryClassName="font-semibold text-white"
+            categoryClassName=" text-white/50"
           >
             <h3 className="text-white">Reach Top Speeds</h3>
           </DisplayMsg>
@@ -103,7 +103,7 @@ function ShowcaseFeatures() {
           <DisplayMsg
             category="Security"
             className="relative z-10"
-            categoryClassName="font-semibold text-emerald-600"
+            categoryClassName="text-emerald-600/50"
           >
             <h3>Maximum Safety</h3>
           </DisplayMsg>

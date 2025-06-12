@@ -1,14 +1,16 @@
 import { ReactElement, useEffect, useRef, useState } from 'react';
 import CarouselSlide from './CarouselSlide';
+import { cn } from '@/utils/cn';
 
 type CarouselProps = {
   children:
     | ReactElement<typeof CarouselSlide>[]
     | ReactElement<typeof CarouselSlide>;
+  className?: string;
 };
 
 /**
- * A horizontal scrollable carousel component with drag-to-scroll and arrow navigation.
+ * A horizontal scrollable carousel component with drag and  scroll support and arrow navigation.
  *
  * Expects children to be one or more `<CarouselSlide />` components.
  * Handles mouse dragging, arrow button scrolling, and disables arrows
@@ -22,10 +24,12 @@ type CarouselProps = {
  * </Carousel>
  * ```
  *
- * @param props.children - One or more `CarouselSlide` components.
+ * @param children - One or more `CarouselSlide` components.
+ * @param className - additional class names for styling.
+ *
  */
 
-function Carousel({ children }: CarouselProps) {
+function Carousel({ children, className = '' }: CarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [disabledArrow, setDisabledArrow] = useState<'prev' | 'next' | null>(
     'prev',
@@ -104,11 +108,20 @@ function Carousel({ children }: CarouselProps) {
   };
 
   return (
-    <>
+    <div
+      className={cn(
+        'carousel',
+        'col',
+        'pointer-events-none',
+        'flex',
+        'w-full',
+        className,
+      )}
+    >
       {/* the carousel */}
       <div
         ref={scrollRef}
-        className="no-scrollbar flex w-full snap-x snap-mandatory scroll-px-[var(--responsive-gutter-width)] overflow-x-scroll scroll-smooth py-3 pb-10 sm:left-0"
+        className="no-scrollbar pointer-events-auto flex w-full snap-x snap-mandatory scroll-px-[var(--responsive-gutter-width)] overflow-x-scroll scroll-smooth py-3 pb-10"
       >
         <ul className="carousel-track flex h-full w-max grid-cols-[repeat(5,260px)] items-stretch gap-4 px-[var(--responsive-gutter-width)] sm:gap-8">
           {!!children && children}
@@ -116,7 +129,7 @@ function Carousel({ children }: CarouselProps) {
       </div>
 
       {/* arrows navigation */}
-      <div className="carousel-arrows-nav mr-[var(--responsive-gutter-width)] flex translate-y-8 justify-center gap-4 self-end opacity-0">
+      <div className="carousel-arrows-nav pointer-events-auto mr-[var(--responsive-gutter-width)] flex justify-center gap-4 self-end">
         <button
           onClick={() => scrollByCard('left')}
           disabled={disabledArrow === 'prev'}
@@ -144,7 +157,7 @@ function Carousel({ children }: CarouselProps) {
           </svg>
         </button>
       </div>
-    </>
+    </div>
   );
 }
 export default Carousel;
