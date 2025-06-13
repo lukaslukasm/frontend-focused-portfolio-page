@@ -6,6 +6,14 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Squeeze as Hamburger } from 'hamburger-react';
 
+/**
+ * Header component that renders desktop and mobile navigation.
+ * Manages toggle state for the mobile menu and triggers associated animations.
+ * Ensures accessibility via keyboard focus management and appropriate aria attributes.
+ *
+ * Component does not accept any props.
+ */
+
 function Header() {
   const [hideNav, setHideNav] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
