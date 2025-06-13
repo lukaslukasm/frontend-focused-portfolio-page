@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import gsap from '../utils/registerGsap';
 import DisplayMsg from './DisplayMsg';
-import reactLogo from '../public/react-logo.svg';
+import reactLogo from '../public/logos/react-logo.svg';
 
 function Intro() {
   const introRef = useRef(null);

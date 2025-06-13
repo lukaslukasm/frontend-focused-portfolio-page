@@ -52,6 +52,34 @@
       @apply ring-2 ring-blue-400;
     }
   }
+
+  .card {
+    @apply pointer-events-none absolute top-1/2 left-1/2 size-20 -translate-x-1/2 -translate-y-1/2 sm:size-40;
+  }
+  .scene {
+    perspective: 1000px;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    left: 0;
+  }
+
+  .content {
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    top: 0;
+  }
 }
 
 @utility flex-center {
