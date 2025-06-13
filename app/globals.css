@@ -44,6 +44,14 @@
       @apply mx-auto rounded-3xl;
     }
   }
+
+  .hamburger-react {
+    @apply rounded-full opacity-90;
+
+    &:focus-visible {
+      @apply ring-2 ring-blue-400;
+    }
+  }
 }
 
 @utility flex-center {
