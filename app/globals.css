@@ -8,10 +8,7 @@
 
 @layer base {
   section {
-    padding: 0 1rem;
-    overflow-x: hidden;
-    margin: 0 auto;
-    width: min(90rem, 100%);
+    @apply col mx-auto flex w-[min(90rem,100%)] gap-10 overflow-x-hidden px-4 py-20 sm:gap-20 sm:py-40;
   }
 
   body > * {
@@ -54,31 +51,10 @@
   }
 
   .card {
-    @apply pointer-events-none absolute top-1/2 left-1/2 size-20 -translate-x-1/2 -translate-y-1/2 sm:size-40;
-  }
-  .scene {
-    perspective: 1000px;
-    overflow: hidden;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    width: 100%;
-    left: 0;
-  }
-
-  .content {
-    pointer-events: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    z-index: 1;
-    top: 0;
+    @apply pointer-events-none absolute inset-0 size-10 -translate-1/2 scale-0 opacity-0 sm:size-20;
+    & img {
+      @apply size-full object-contain;
+    }
   }
 }
 
