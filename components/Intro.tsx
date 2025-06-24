@@ -6,6 +6,12 @@ import gsap from '../utils/registerGsap';
 import DisplayMsg from './DisplayMsg';
 import reactLogo from '../public/logos/react-logo.svg';
 
+/**
+ * Section component for displaying the website's Introduction.
+ *
+ * Renders static content with layout, styling, and animations.
+ */
+
 function Intro() {
   const introRef = useRef(null);
 

@@ -51,15 +51,23 @@
   }
 
   .card {
-    @apply pointer-events-none absolute inset-0 size-10 -translate-1/2 scale-0 opacity-0 sm:size-20;
+    @apply pointer-events-none absolute inset-0 size-10 -translate-1/2 scale-0 sm:size-20;
     & img {
       @apply size-full object-contain;
     }
+  }
+
+  .card.fav {
+    @apply grayscale-0;
   }
 }
 
 @utility flex-center {
   @apply flex items-center justify-center;
+}
+
+@utility absolute-center {
+  @apply absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2;
 }
 
 @utility col {
