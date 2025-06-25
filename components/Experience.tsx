@@ -24,6 +24,7 @@ import sas360 from '../public/logos/sas360.png';
 import woo from '../public/logos/woo.png';
 import wordpress from '../public/logos/wordpress.png';
 import strapi from '../public/logos/strapi.png';
+import node from '../public/logos/node.png';
 
 import LogosWheel from './LogosWheel';
 import { useGSAP } from '@gsap/react';
@@ -78,7 +79,7 @@ function Experience() {
             '<',
           )
           .to('.line2', {
-            top: '35svh',
+            top: '30svh',
             ease: 'power4.out',
           })
           .to('.wheels', { top: '50vh', y: 0 }, '<')
@@ -133,10 +134,14 @@ function Experience() {
             '<',
           )
           .to('.wheels', { right: 0, x: 0 }, '<')
-          .to('.card', {
-            opacity: 0.05,
-            filter: 'grayscale(100)',
-          })
+          .fromTo(
+            '.card',
+            { opacity: 0.5 },
+            {
+              opacity: 0.05,
+              filter: 'grayscale(100)',
+            },
+          )
           .to(
             '.fav',
             {
@@ -188,16 +193,13 @@ function Experience() {
               <Image src={reactLogo} alt="React logo" />
             </div>
             <div className="card size-8 sm:size-18">
-              <Image src={laravel} alt="Laravel logo" />
-            </div>
-            <div className="card size-8 sm:size-18">
               <Image src={silverstripe} alt="Silverstripe logo" />
-            </div>
-            <div className="card fav size-8 sm:size-18">
-              <Image src={strapi} alt="Strapi logo" />
             </div>
             <div className="card size-8 sm:size-18">
               <Image src={alpine} alt="Alpine logo" />
+            </div>
+            <div className="card fav size-8 sm:size-18">
+              <Image src={strapi} alt="Strapi logo" />
             </div>
             <div className="card size-8 sm:size-18">
               <Image src={shoptet} alt="Shoptet logo" />
@@ -207,6 +209,12 @@ function Experience() {
             </div>
             <div className="card size-8 sm:size-18">
               <Image src={woo} alt="Woocommerce logo" />
+            </div>
+            <div className="card size-8 sm:size-18">
+              <Image src={laravel} alt="Laravel logo" />
+            </div>
+            <div className="card fav size-8 sm:size-18">
+              <Image src={node} alt="Node.js logo" />
             </div>
             <div className="card size-8 sm:size-18">
               <Image src={sas360} alt="SAS360 logo" />
