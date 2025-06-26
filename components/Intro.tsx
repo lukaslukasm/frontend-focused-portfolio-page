@@ -4,7 +4,13 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import gsap from '../utils/registerGsap';
 import DisplayMsg from './DisplayMsg';
-import reactLogo from '../public/react-logo.svg';
+import reactLogo from '../public/logos/react-logo.svg';
+
+/**
+ * Section component for displaying the website's Introduction.
+ *
+ * Renders static content with layout, styling, and animations.
+ */
 
 function Intro() {
   const introRef = useRef(null);
@@ -13,10 +19,8 @@ function Intro() {
     () => {
       gsap.timeline({
         scrollTrigger: {
-          trigger: introRef.current,
+          trigger: '.heading',
           start: 'top top',
-          end: '+=500',
-          pin: true,
         },
       });
 
@@ -32,8 +36,9 @@ function Intro() {
           '.reactLogo',
           { rotateZ: 0 },
           {
-            rotateZ: 120,
-            duration: 4,
+            rotateZ: 360,
+            duration: 10,
+            repeat: -1,
             ease: 'linear',
           },
         )
@@ -46,12 +51,6 @@ function Intro() {
           },
           '<',
         )
-        // .fromTo(
-        //   '.line1 .skill',
-        //   { opacity: 0, top: 0 },
-        //   { opacity: 1, top: '-1rem', duration: 0.5, ease: 'back.out' },
-        //   '<',
-        // )
         .addLabel('showDashboard', '>')
         .fromTo(
           '.line1',
@@ -59,12 +58,6 @@ function Intro() {
           { rotateX: 90, y: -30, duration: 0.2 },
           'showDashboard',
         )
-        // .fromTo(
-        //   '.line1 .skill',
-        //   { rotateX: 0, y: 0 },
-        //   { rotateX: 90, y: -20, duration: 0.2 },
-        //   'showDashboard',
-        // )
         .fromTo(
           '.line2',
           { rotateX: -90, y: 0 },
@@ -99,19 +92,16 @@ function Intro() {
     <>
       <section
         ref={introRef}
-        className="flex-center relative flex h-screen overflow-y-hidden"
+        className="col w-[min(100rem, 100%)] relative flex h-svh overflow-x-visible overflow-y-hidden"
       >
-        <DisplayMsg
-          category="Skill"
-          className="heading absolute top-20 left-4 opacity-0 sm:top-40"
-        >
+        <DisplayMsg category="Skill" className="heading opacity-0">
           Showcase
         </DisplayMsg>
-        <div className="intro-wrapper col flex-center relative h-full flex-grow">
+        <div className="intro-wrapper col absolute left-1/2 mx-auto flex h-full w-max max-w-full -translate-x-1/2 items-center">
           <Image
             src={reactLogo}
             alt="react logo"
-            className="reactLogo mb-5 size-20 opacity-70 sm:mb-10 sm:size-32"
+            className="reactLogo mb-5 size-20 opacity-70 sm:mt-40 sm:mb-10 sm:size-32"
           />
           <DisplayMsg className="line1 flex">
             <div className="col relative inline-block text-center">
@@ -121,7 +111,7 @@ function Intro() {
           </DisplayMsg>
           <DisplayMsg className="line2 rotate-x-90">Watch this</DisplayMsg>
         </div>
-        <div className="dashboard border-primary/10 flex-center placeholder-elm absolute aspect-video h-full max-h-[70vh] max-w-[calc(100%-2rem)] translate-y-[80vh] scale-75 overflow-hidden rounded-2xl drop-shadow-xl max-sm:mt-20 sm:max-h-[50vh] sm:drop-shadow-2xl">
+        <div className="dashboard flex-center placeholder-elm h-full translate-y-[80vh] scale-75 overflow-hidden rounded-2xl drop-shadow-xl sm:drop-shadow-2xl 2xl:mx-7">
           <Image
             alt="dashboard"
             className="h-full w-full object-cover"
@@ -130,7 +120,6 @@ function Intro() {
           />
         </div>
       </section>
-      <div className="h-[40vh] max-sm:h-[90vh]"></div>
     </>
   );
 }

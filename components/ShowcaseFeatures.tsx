@@ -20,7 +20,7 @@ function ShowcaseFeatures() {
       gsap
         .timeline({
           scrollTrigger: {
-            trigger: featuresRef.current,
+            trigger: '.carousel',
           },
         })
         .to('.carousel-slide, .carousel-arrows-nav, .heading', {
@@ -37,10 +37,10 @@ function ShowcaseFeatures() {
   return (
     <section
       ref={featuresRef}
-      className="flex-center col w-full items-start justify-between overflow-x-visible px-0 pb-40"
+      className="flex-center col w-full items-start justify-start overflow-x-visible px-0"
     >
       <DisplayMsg
-        className="heading mt-3 mb-4 ml-[var(--responsive-gutter-width)] translate-y-8 opacity-0 sm:mb-12"
+        className="heading mb-4 ml-[var(--responsive-gutter-width)] translate-y-8 opacity-0"
         category="Skill"
       >
         <h2>Showcase - features</h2>
