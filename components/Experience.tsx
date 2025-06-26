@@ -25,6 +25,7 @@ import woo from '../public/logos/woo.png';
 import wordpress from '../public/logos/wordpress.png';
 import strapi from '../public/logos/strapi.png';
 import node from '../public/logos/node.png';
+import docker from '../public/logos/docker.webp';
 
 import LogosWheel from './LogosWheel';
 import { useGSAP } from '@gsap/react';
@@ -83,10 +84,14 @@ function Experience() {
             ease: 'power4.out',
           })
           .to('.wheels', { top: '50vh', y: 0 }, '<')
-          .to('.card', {
-            opacity: 0.05,
-            filter: 'grayscale(100)',
-          })
+          .fromTo(
+            '.card',
+            { opacity: 0.5 },
+            {
+              opacity: 0.05,
+              filter: 'grayscale(100)',
+            },
+          )
           .to(
             '.fav',
             {
@@ -195,9 +200,6 @@ function Experience() {
             <div className="card size-8 sm:size-18">
               <Image src={silverstripe} alt="Silverstripe logo" />
             </div>
-            <div className="card size-8 sm:size-18">
-              <Image src={alpine} alt="Alpine logo" />
-            </div>
             <div className="card fav size-8 sm:size-18">
               <Image src={strapi} alt="Strapi logo" />
             </div>
@@ -206,9 +208,6 @@ function Experience() {
             </div>
             <div className="card fav size-8 sm:size-18">
               <Image src={tw} alt="Tailwind logo" />
-            </div>
-            <div className="card size-8 sm:size-18">
-              <Image src={woo} alt="Woocommerce logo" />
             </div>
             <div className="card size-8 sm:size-18">
               <Image src={laravel} alt="Laravel logo" />
@@ -237,11 +236,17 @@ function Experience() {
             <div className="card size-12 sm:size-24">
               <Image src={builderio} alt="Builder.io logo" />
             </div>
+            <div className="card size-12 sm:size-24">
+              <Image src={docker} alt="Docker logo" />
+            </div>
             <div className="card fav size-12 sm:size-24">
               <Image src={filament} alt="Filament logo" />
             </div>
             <div className="card size-12 sm:size-24">
               <Image src={wordpress} alt="Wordpress logo" />
+            </div>
+            <div className="card size-12 sm:size-24">
+              <Image src={alpine} alt="Alpine logo" />
             </div>
             <div className="card size-12 sm:size-24">
               <Image src={phpslim} alt="PHP SLim logo" />
@@ -263,6 +268,9 @@ function Experience() {
             </div>
             <div className="card size-12 sm:size-24">
               <Image src={drupal} alt="Drupal logo" />
+            </div>
+            <div className="card size-12 sm:size-24">
+              <Image src={woo} alt="Woocommerce logo" />
             </div>
             <div className="card size-12 sm:size-24">
               <Image
