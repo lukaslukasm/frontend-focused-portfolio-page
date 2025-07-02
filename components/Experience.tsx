@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react';
 import SmallWheelLogos from './SmallWheelLogos';
 import BigWheelLogos from './BigWheelLogos';
 import gsap from 'gsap';
-// import StatsSubSection from './StatsSubSection';
+import StatsSubSection from './StatsSubSection';
 
 /**
  * Section component for displaying experience with technologies.
@@ -170,7 +170,7 @@ function Experience() {
           <BigWheelLogos />
         </div>
       </div>
-      {/* <StatsSubSection /> */}
+      <StatsSubSection />
     </section>
   );
 }
