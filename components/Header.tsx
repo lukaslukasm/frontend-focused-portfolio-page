@@ -98,7 +98,7 @@ function Header() {
         <ul className="flex w-full gap-8 max-sm:hidden [&_li]:flex [&_li]:items-center">
           {/* logo */}
           <li>
-            <Link href="/" aria-label="Go to Homepagea" className="">
+            <Link href="/" aria-label="Go to Homepage" className="">
               Home
             </Link>
           </li>
