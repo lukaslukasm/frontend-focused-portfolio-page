@@ -1,5 +1,5 @@
 'use client';
-import './globals.css';
+import '../styles/globals.css';
 import '../utils/registerGsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';

@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import DisplayMsg from './DisplayMsg';
-import 'react-tooltip/dist/react-tooltip.css';
 import { useGSAP } from '@gsap/react';
 import SmallWheelLogos from './SmallWheelLogos';
 import BigWheelLogos from './BigWheelLogos';

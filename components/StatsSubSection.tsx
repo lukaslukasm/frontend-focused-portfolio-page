@@ -1,4 +1,5 @@
 import { Tooltip } from 'react-tooltip';
+import '../styles/react-tooltip.css';
 import StatsBubblesView from './StatsBubblesView';
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
