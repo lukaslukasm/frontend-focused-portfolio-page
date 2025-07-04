@@ -32,32 +32,7 @@ function Intro() {
             toggleActions: 'play none none none',
           },
         })
-        .fromTo(
-          '.reactLogo',
-          { rotateZ: 0 },
-          {
-            rotateZ: 360,
-            duration: 10,
-            repeat: -1,
-            ease: 'linear',
-          },
-        )
-        .fromTo(
-          '.question-mark',
-          { rotateY: 0 },
-          {
-            rotateY: 720,
-            duration: 1.7,
-          },
-          '<',
-        )
         .addLabel('showDashboard', '>')
-        .fromTo(
-          '.line1',
-          { rotateX: 0, y: 0 },
-          { rotateX: 90, y: -30, duration: 0.2 },
-          'showDashboard',
-        )
         .fromTo(
           '.line2',
           { rotateX: -90, y: 0 },
@@ -103,13 +78,7 @@ function Intro() {
             alt="react logo"
             className="reactLogo mb-5 size-20 opacity-70 sm:mt-40 sm:mb-10 sm:size-32"
           />
-          <DisplayMsg className="line1 flex">
-            <div className="col relative inline-block text-center">
-              Wanna see something cool
-              <span className="question-mark inline-block">?</span>
-            </div>
-          </DisplayMsg>
-          <DisplayMsg className="line2 rotate-x-90">Watch this</DisplayMsg>
+          <DisplayMsg className="line2 rotate-x-90">Selected Work</DisplayMsg>
         </div>
         <div className="dashboard flex-center placeholder-elm h-full translate-y-[80vh] scale-75 overflow-hidden rounded-2xl drop-shadow-xl sm:drop-shadow-2xl 2xl:mx-7">
           <Image

@@ -151,7 +151,7 @@ function Header() {
             'fixed',
             'inset-0',
             'z-40',
-            'h-screen',
+            'h-dvh',
             '-translate-y-full',
             'bg-gray-100',
             'opacity-50',
