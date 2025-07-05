@@ -121,6 +121,7 @@ function Carousel({ children, className = '' }: CarouselProps) {
       {/* the carousel */}
       <div
         ref={scrollRef}
+        tabIndex={-1}
         className="no-scrollbar pointer-events-auto flex w-full snap-x snap-mandatory scroll-px-[var(--responsive-gutter-width)] overflow-x-scroll scroll-smooth py-3 pb-10"
       >
         <ul

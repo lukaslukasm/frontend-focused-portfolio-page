@@ -40,6 +40,7 @@ export default function DisplayMsg({
     >
       {!!category && (
         <span
+          aria-hidden={true}
           className={cn(
             'skill',
             'left-0',

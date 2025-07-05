@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import gsap from '../utils/registerGsap';
 import DisplayMsg from './DisplayMsg';
-import reactLogo from '../public/logos/react-logo.svg';
 
 /**
  * Section component for displaying the website's Introduction.
@@ -17,30 +16,42 @@ function Intro() {
 
   useGSAP(
     () => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: '.intro',
+            start: 'top center-=300',
+            end: '+=1500',
+            scrub: 1,
+            markers: false,
+          },
+        })
+        .to('.intro > div', { opacity: 1, y: 0, duration: 1.5, stagger: 10 });
       gsap.timeline({
         scrollTrigger: {
-          trigger: '.heading',
-          start: 'top top',
+          trigger: '.intro-pin',
+          start: 'top center-=300',
+          end: '+=2000',
+          pin: true,
+          markers: false,
         },
       });
 
       gsap
         .timeline({
           scrollTrigger: {
-            trigger: '.reactLogo',
-            start: 'bottom bottom',
-            toggleActions: 'play none none none',
+            trigger: '.heading',
+            start: 'top bottom-=200',
+            toggleActions: 'restart none none none',
+            markers: false,
           },
         })
-        .addLabel('showDashboard', '>')
         .fromTo(
-          '.line2',
-          { rotateX: -90, y: 0 },
-          { rotateX: 0, y: -70, duration: 0.2 },
-          'showDashboard',
+          '.heading',
+          { opacity: 0, y: -20 },
+          { opacity: 1, y: 0, duration: 0.5 },
         )
-        .to('.intro-wrapper', { scale: 0.8, duration: 0.3 }, 'showDashboard+=1')
-        .to('.intro-wrapper', { y: 30, duration: 0.3 }, '<+=0.05')
+        .addLabel('showDashboard')
         .fromTo(
           '.dashboard',
           { y: '80vh' },
@@ -52,12 +63,6 @@ function Intro() {
           { scale: 0.75 },
           { scale: 1, duration: 0.7, ease: 'power4.out' },
           '<+=0.2',
-        )
-        .fromTo(
-          '.heading',
-          { opacity: 0, y: -20 },
-          { opacity: 1, y: 0, duration: 0.5, ease: 'power4.out' },
-          '>',
         );
     },
     { scope: introRef },
@@ -65,28 +70,69 @@ function Intro() {
 
   return (
     <>
-      <section
-        ref={introRef}
-        className="col w-[min(100rem, 100%)] relative flex h-svh overflow-x-visible overflow-y-hidden"
-      >
-        <DisplayMsg category="Skill" className="heading opacity-0">
-          Showcase
-        </DisplayMsg>
-        <div className="intro-wrapper col absolute left-1/2 mx-auto flex h-full w-max max-w-full -translate-x-1/2 items-center">
-          <Image
-            src={reactLogo}
-            alt="react logo"
-            className="reactLogo mb-5 size-20 opacity-70 sm:mt-40 sm:mb-10 sm:size-32"
-          />
-          <DisplayMsg className="line2 rotate-x-90">Selected Work</DisplayMsg>
+      <section className="" ref={introRef}>
+        <div className="h-[210svh]">
+          <div className="intro-pin">
+            <div className="intro col mx-auto flex max-w-[900px] gap-8">
+              <DisplayMsg className="translate-y-8 opacity-0">
+                After wearing the fullstack hat for 3 years now,
+              </DisplayMsg>
+              <DisplayMsg className="translate-y-8 opacity-0">
+                I&apos;ve decided to focus on the part that brings me the
+                greatest joy.
+              </DisplayMsg>
+              <DisplayMsg className="text-primary translate-y-8 opacity-0">
+                The frontend development.
+              </DisplayMsg>
+            </div>
+          </div>
         </div>
-        <div className="dashboard flex-center placeholder-elm h-full translate-y-[80vh] scale-75 overflow-hidden rounded-2xl drop-shadow-xl sm:drop-shadow-2xl 2xl:mx-7">
-          <Image
-            alt="dashboard"
-            className="h-full w-full object-cover"
-            fill
-            src="/dashboard-placeholder.png"
-          />
+        <div className="col relative flex gap-10 overflow-x-visible overflow-y-hidden sm:gap-20">
+          <DisplayMsg category="Selected Work" className="heading opacity-0">
+            <div className="flex items-center gap-4">
+              <h2 className="">Crypto Dashboard</h2>
+              <a
+                href="#"
+                target="_blank"
+                className="flex-center hover:bg-primary group border-primary text-primary outline- outline-bg mt-2 gap-2 rounded-full border-2 px-3 py-1 text-base ring-blue-500 transition-colors hover:text-white focus-visible:ring-6 focus-visible:outline-2"
+              >
+                Link
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={4}
+                  className="stroke-primary size-4 transition-colors group-hover:stroke-white"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                  />
+                </svg>
+              </a>
+            </div>
+          </DisplayMsg>
+          <div className="dashboard flex-center relative translate-y-[80vh] scale-75">
+            <div className="col flex w-full gap-4">
+              <div className="relative aspect-video w-full">
+                <Image
+                  fill
+                  src="/images/macbook-mockup.jpg"
+                  alt="Macbook mockup"
+                  className="object-contain"
+                />
+                <div className="absolute top-[6%] right-[8%] left-[8%] aspect-video">
+                  <Image
+                    alt="dashboard"
+                    className="object-contain"
+                    fill
+                    src="/images/dashboard-placeholder.png"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>

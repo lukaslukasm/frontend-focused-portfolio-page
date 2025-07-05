@@ -1,8 +1,10 @@
 @import 'tailwindcss';
 
 @theme {
+  --breakpoint-xs: 27rem;
   --color-text: var(--color-gray-600);
-  --color-primary: var(--color-cyan-500);
+  --color-primary: var(--color-cyan-600);
+  --color-bg: var(--color-cyan-50);
   --responsive-gutter-width: max(calc(((100vw - 1440px + 2rem) / 2)), 1rem);
 }
 
@@ -72,10 +74,6 @@
 
 @utility col {
   @apply flex flex-col;
-}
-
-@utility placeholder-elm {
-  @apply text-3xl font-black tracking-tighter text-cyan-50 uppercase;
 }
 
 .topic-badge {

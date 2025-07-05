@@ -38,10 +38,10 @@ function Hero() {
     <section ref={heroRef} className="flex-center col relative h-dvh">
       <div className="col flex text-center">
         <div className="name invisible mb-0 font-bold tracking-tight sm:mb-4 sm:text-xl">
-          Hello, I&apos;m Lukas
+          Hello, I&apos;m Lukas.
         </div>
         <div>
-          <h1 className="from-text to-text invisible relative bg-gradient-to-r from-10% via-cyan-400 to-90% bg-size-[200%] bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-7xl">
+          <h1 className="from-text to-text xs:text-5xl invisible relative bg-gradient-to-r from-10% via-cyan-400 to-90% bg-size-[200%] bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-7xl">
             Your next Frontend&nbsp;developer.
           </h1>
         </div>

@@ -41,9 +41,9 @@ function ShowcaseFeatures() {
     >
       <DisplayMsg
         className="heading mb-4 ml-[var(--responsive-gutter-width)] translate-y-8 opacity-0"
-        category="Skill"
+        category="Selected Work"
       >
-        <h2>Showcase - features</h2>
+        <h2>Features</h2>
       </DisplayMsg>
       <Carousel className="[&_.carousel-arrows-nav]:translate-y-8 [&_.carousel-arrows-nav]:opacity-0 [&_.carousel-slide]:translate-y-8 [&_.carousel-slide]:opacity-0">
         <CarouselSlide className="bg-blue-50">
