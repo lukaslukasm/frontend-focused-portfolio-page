@@ -68,7 +68,7 @@ function LogosWheel({
       gsap
         .timeline({
           scrollTrigger: {
-            trigger: '.content',
+            trigger: mainWrapRef.current,
             start: 'top center',
           },
           delay: 2,

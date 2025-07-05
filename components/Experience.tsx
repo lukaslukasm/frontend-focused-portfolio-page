@@ -1,43 +1,19 @@
 import { useRef } from 'react';
 import DisplayMsg from './DisplayMsg';
-import Image from 'next/image';
-import reactLogo from '../public/logos/react-logo.svg';
-import tw from '../public/logos/tw.png';
-import laravel from '../public/logos/laravel.png';
-import next from '../public/logos/nextjs.png';
-import shopify from '../public/logos/shopify.png';
-import shoptet from '../public/logos/shoptet.png';
-import filament from '../public/logos/filament.png';
-import silverstripe from '../public/logos/silverstripe.png';
-import bootstrap from '../public/logos/bootstrap.png';
-import alpine from '../public/logos/alpine.png';
-import builderio from '../public/logos/builderio.svg';
-import drupal from '../public/logos/drupal.png';
-import email from '../public/logos/email.png';
-import framer from '../public/logos/framer.png';
-import gsap from 'gsap';
-import gsapLogo from '../public/logos/gsap.svg';
-import hubspot from '../public/logos/hubspot.webp';
-import jquery from '../public/logos/jquery.svg';
-import phpslim from '../public/logos/php-slim.jpg';
-import sas360 from '../public/logos/sas360.png';
-import woo from '../public/logos/woo.png';
-import wordpress from '../public/logos/wordpress.png';
-import strapi from '../public/logos/strapi.png';
-import node from '../public/logos/node.png';
-import docker from '../public/logos/docker.webp';
-
-import LogosWheel from './LogosWheel';
 import { useGSAP } from '@gsap/react';
+import SmallWheelLogos from './SmallWheelLogos';
+import BigWheelLogos from './BigWheelLogos';
+import gsap from 'gsap';
+import StatsSubSection from './StatsSubSection';
 
 /**
  * Section component for displaying experience with technologies.
  *
- * Renders static content with layout, styling, and animations.
+ * Renders static content and dynamic contnent from /data/technologiesUsage.json with layout, styling, and animations.
  */
 
 function Experience() {
-  const experienceRef = useRef(null);
+  const experienceRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
@@ -48,7 +24,7 @@ function Experience() {
           .timeline({
             scrollTrigger: {
               trigger: experienceRef.current,
-              start: 'center bottom',
+              start: 'top center',
             },
           })
           .to('.heading', {
@@ -80,10 +56,11 @@ function Experience() {
             '<',
           )
           .to('.line2', {
-            top: '30svh',
+            bottom: '-30svh',
             ease: 'power4.out',
+            marginBottom: 0,
           })
-          .to('.wheels', { top: '50vh', y: 0 }, '<')
+          .to('.wheels', { top: '30vh', y: 0 }, '<')
           .fromTo(
             '.card',
             { opacity: 0.5 },
@@ -163,124 +140,36 @@ function Experience() {
   return (
     <section
       ref={experienceRef}
-      className="experience relative h-[120vh] flex-row gap-0 overflow-hidden sm:h-screen"
+      className="experience relative h-auto gap-0 overflow-x-visible"
     >
       <DisplayMsg
-        className="heading translate-y-8 opacity-0"
+        className="heading z-50 flex translate-y-8 opacity-0"
         categoryClassName="text-orange-300"
         category="Experience"
       >
         <h2>Technologies</h2>
       </DisplayMsg>
-      <div className="col absolute-center z-10 flex w-11/12 sm:mt-24">
-        <DisplayMsg className="line1 translate-y-10 -rotate-x-45 opacity-0">
-          <h2 className="my-32 bg-radial from-white from-50% to-transparent to-70% text-center text-5xl max-sm:text-3xl">
-            Over the past few years, I&apos;ve worked <br /> with a wide range
-            of technologies
-          </h2>
-        </DisplayMsg>
-        <DisplayMsg className="line2 absolute translate-y-8 opacity-0 xl:top-1/4 xl:max-w-96">
-          <h2 className="bg-radial from-white from-50% to-transparent to-70% text-5xl max-xl:my-32 max-xl:text-center max-sm:text-3xl xl:text-4xl">
-            Some of them truly stuck with me - and those are the ones I&apos;m
-            taking along.
-          </h2>
-        </DisplayMsg>
-      </div>
-      <div className="wheels absolute-center col-span-2 row-span-2 w-[min(100%,60rem)] overflow-hidden sm:mt-24">
-        {/* small wheel */}
-        <div className="">
-          <LogosWheel
-            radiusWidthMobile={70}
-            className=""
-            radiusWidthDesktop={180}
-          >
-            <div className="card fav size-8 sm:size-18">
-              <Image src={reactLogo} alt="React logo" />
-            </div>
-            <div className="card size-8 sm:size-18">
-              <Image src={silverstripe} alt="Silverstripe logo" />
-            </div>
-            <div className="card fav size-8 sm:size-18">
-              <Image src={strapi} alt="Strapi logo" />
-            </div>
-            <div className="card size-8 sm:size-18">
-              <Image src={shoptet} alt="Shoptet logo" />
-            </div>
-            <div className="card fav size-8 sm:size-18">
-              <Image src={tw} alt="Tailwind logo" />
-            </div>
-            <div className="card size-8 sm:size-18">
-              <Image src={laravel} alt="Laravel logo" />
-            </div>
-            <div className="card fav size-8 sm:size-18">
-              <Image src={node} alt="Node.js logo" />
-            </div>
-            <div className="card size-8 sm:size-18">
-              <Image src={sas360} alt="SAS360 logo" />
-            </div>
-          </LogosWheel>
+      <div className="relative min-h-[90vh] sm:min-h-[70vh]">
+        <div className="col absolute-center z-10 flex w-11/12 sm:mt-24">
+          <DisplayMsg className="line1 translate-y-10 -rotate-x-45 opacity-0">
+            <h2 className="my-32 bg-radial from-cyan-50 from-50% to-transparent to-70% text-center text-5xl max-sm:text-3xl">
+              Over the past few years, I&apos;ve worked <br /> with a wide range
+              of technologies
+            </h2>
+          </DisplayMsg>
+          <DisplayMsg className="line2 absolute translate-y-8 opacity-0 xl:top-1/4 xl:max-w-96">
+            <h2 className="bg-radial from-cyan-50 from-50% to-transparent to-70% text-5xl max-xl:my-32 max-xl:text-center max-sm:text-3xl xl:text-4xl">
+              Some of them truly stuck with me - and those are the ones I&apos;m
+              taking along.
+            </h2>
+          </DisplayMsg>
         </div>
-        {/* big wheel */}
-        <div className="absolute inset-0">
-          <LogosWheel
-            radiusWidthMobile={160}
-            radiusWidthDesktop={340}
-            spinDirection="left"
-          >
-            <div className="card fav size-12 sm:size-24">
-              <Image src={next} alt="Next.js logo" />
-            </div>
-            <div className="card size-12 sm:size-24">
-              <Image src={bootstrap} alt="Bootstrap logo" />
-            </div>
-            <div className="card size-12 sm:size-24">
-              <Image src={builderio} alt="Builder.io logo" />
-            </div>
-            <div className="card size-12 sm:size-24">
-              <Image src={docker} alt="Docker logo" />
-            </div>
-            <div className="card fav size-12 sm:size-24">
-              <Image src={filament} alt="Filament logo" />
-            </div>
-            <div className="card size-12 sm:size-24">
-              <Image src={wordpress} alt="Wordpress logo" />
-            </div>
-            <div className="card size-12 sm:size-24">
-              <Image src={alpine} alt="Alpine logo" />
-            </div>
-            <div className="card size-12 sm:size-24">
-              <Image src={phpslim} alt="PHP SLim logo" />
-            </div>
-            <div className="card fav size-12 sm:size-24">
-              <Image src={shopify} alt="Shopify logo" />
-            </div>
-            <div className="card size-12 sm:size-24">
-              <Image src={jquery} alt="JQuery logo" />
-            </div>
-            <div className="card size-12 sm:size-24">
-              <Image src={framer} alt="Bootstrap logo" />
-            </div>
-            <div className="card size-12 sm:size-24">
-              <Image src={hubspot} alt="Hubspot logo" />
-            </div>
-            <div className="card fav size-12 sm:size-24">
-              <Image src={gsapLogo} alt="GSAP logo" />
-            </div>
-            <div className="card size-12 sm:size-24">
-              <Image src={drupal} alt="Drupal logo" />
-            </div>
-            <div className="card size-12 sm:size-24">
-              <Image src={woo} alt="Woocommerce logo" />
-            </div>
-            <div className="card size-12 sm:size-24">
-              <Image
-                src={email}
-                alt="Icon illustrating Coding Custom email templates"
-              />
-            </div>
-          </LogosWheel>
+        <div className="wheels absolute-center col-span-2 row-span-2 w-[min(100%,60rem)] overflow-hidden sm:mt-24">
+          <SmallWheelLogos />
+          <BigWheelLogos />
         </div>
       </div>
+      <StatsSubSection />
     </section>
   );
 }

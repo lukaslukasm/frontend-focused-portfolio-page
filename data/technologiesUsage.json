@@ -1,0 +1,198 @@
+[
+  {
+    "label": "Scroll to discover",
+    "className": [
+      "font-normal",
+      "bg-orange-500/20",
+      "flex-col-reverse",
+      "[&_img]:opacity-80"
+    ],
+    "logo": "/images/arrow-down.svg"
+  },
+  {
+    "label": "Tailwind",
+    "value": 28,
+    "className": ["bg-sky-400/20", "[&_img]:opacity-80"],
+    "logo": "/logos/tw.png"
+  },
+  {
+    "label": "React",
+    "value": 20,
+    "className": "bg-cyan-600/20",
+    "logo": "/logos/react-logo.svg"
+  },
+  {
+    "label": "Email-safe CSS",
+    "value": 16,
+    "className": "bg-slate-500/20",
+    "logo": "/logos/email.png"
+  },
+  {
+    "label": "GTM",
+    "value": 13,
+    "className": "bg-sky-400/20",
+    "logo": "/logos/gtm.png"
+  },
+  {
+    "label": "Vanilla Techstack",
+    "value": 12,
+    "className": ["bg-slate-500/20", "text-base"],
+    "logo": "/logos/vanilla.png"
+  },
+  {
+    "label": "Docker",
+    "value": 9,
+    "className": "bg-sky-400/20",
+    "logo": "/logos/docker.webp"
+  },
+  {
+    "label": "Typescript",
+    "value": 9,
+    "className": "bg-sky-600/20",
+    "logo": "/logos/ts.png"
+  },
+  {
+    "label": "Wordpress",
+    "value": 6,
+    "className": "bg-cyan-600/20",
+    "logo": "/logos/wordpress.png"
+  },
+  {
+    "label": "Next.js",
+    "value": 5,
+    "className": "bg-neutral-500/20",
+    "logo": "/logos/nextjs.png"
+  },
+  {
+    "label": "GSAP",
+    "value": 5,
+    "className": "bg-lime-500/20",
+    "logo": "/logos/gsap.svg"
+  },
+  {
+    "label": "PHPSlim",
+    "value": 3,
+    "className": "bg-green-400/20",
+    "logo": "/logos/php-slim.jpg"
+  },
+  {
+    "label": "Alpine.js",
+    "value": 3,
+    "className": "bg-slate-600/20",
+    "logo": "/logos/alpine.png"
+  },
+  {
+    "label": "Bloomreach",
+    "value": 3,
+    "className": "bg-yellow-400/20",
+    "logo": "/logos/bloomreach.png"
+  },
+  {
+    "label": "Node.js",
+    "value": 2,
+    "className": "bg-green-400/20",
+    "logo": "/logos/node.png"
+  },
+  {
+    "label": "Laravel",
+    "value": 2,
+    "className": "bg-red-400/20",
+    "logo": "/logos/laravel.png"
+  },
+  {
+    "label": "Woo Commerce",
+    "value": 2,
+    "className": ["bg-purple-400/20", "text-sm"],
+    "logo": "/logos/woo.png"
+  },
+  {
+    "label": "jQuery",
+    "value": 2,
+    "className": "bg-sky-600/20",
+    "logo": "/logos/jquery.svg"
+  },
+  {
+    "label": "motion.js",
+    "value": 2,
+    "className": "bg-pink-500/20",
+    "logo": "/logos/framer.png"
+  },
+  {
+    "label": "Shopify",
+    "value": 2,
+    "className": "bg-green-400/20",
+    "logo": "/logos/shopify.png"
+  },
+  {
+    "label": "Silverstripe",
+    "value": 1,
+    "className": "bg-sky-600/20",
+    "logo": "/logos/silverstripe.png"
+  },
+  {
+    "label": "Drupal",
+    "value": 1,
+    "className": "bg-sky-500/20",
+    "logo": "/logos/drupal.png"
+  },
+  {
+    "label": "Strapi",
+    "value": 1,
+    "className": "bg-blue-500/20",
+    "logo": "/logos/strapi.png"
+  },
+  {
+    "label": "Shoptet",
+    "value": 1,
+    "className": "bg-amber-500/20",
+    "logo": "/logos/shoptet.png"
+  },
+  {
+    "label": "Bootstrap",
+    "value": 1,
+    "className": "bg-indigo-400/20",
+    "logo": "/logos/bootstrap.png"
+  },
+  {
+    "label": "MaterialUI",
+    "value": 1,
+    "className": "bg-blue-400/20",
+    "logo": "/logos/mui.svg"
+  },
+  {
+    "label": "Styled Components",
+    "value": 1,
+    "className": ["bg-pink-400/20", "text-xs"],
+    "logo": "/logos/styled-components.png"
+  },
+  {
+    "label": "Hubspot",
+    "value": 1,
+    "className": "bg-orange-300/20",
+    "logo": "/logos/hubspot.webp"
+  },
+  {
+    "label": "Builder.io",
+    "value": 1,
+    "className": "bg-sky-400/20",
+    "logo": "/logos/builderio.svg"
+  },
+  {
+    "label": "Filament",
+    "value": 1,
+    "className": "bg-orange-300/20",
+    "logo": "/logos/filament.png"
+  },
+  {
+    "label": "SAS360",
+    "value": 1,
+    "className": "bg-sky-400/20",
+    "logo": "/logos/sas360.png"
+  },
+  {
+    "label": "Gatsby",
+    "value": 1,
+    "className": "bg-violet-400/20",
+    "logo": "/logos/gatsby.png"
+  }
+]

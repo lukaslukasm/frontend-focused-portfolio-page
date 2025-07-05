@@ -98,7 +98,7 @@ function Header() {
         <ul className="flex w-full gap-8 max-sm:hidden [&_li]:flex [&_li]:items-center">
           {/* logo */}
           <li>
-            <Link href="/" aria-label="Go to Homepagea" className="">
+            <Link href="/" aria-label="Go to Homepage" className="">
               Home
             </Link>
           </li>
@@ -151,7 +151,7 @@ function Header() {
             'fixed',
             'inset-0',
             'z-40',
-            'h-screen',
+            'h-dvh',
             '-translate-y-full',
             'bg-gray-100',
             'opacity-50',
