@@ -21,7 +21,7 @@ function Intro() {
           scrollTrigger: {
             trigger: '.intro',
             start:
-              window.innerWidth > 620 ? 'top center-=300' : 'top center-=100',
+              window.innerWidth > 640 ? 'top center-=300' : 'top center-=100',
             end: '+=1500',
             scrub: 1,
             markers: false,
@@ -32,7 +32,7 @@ function Intro() {
         scrollTrigger: {
           trigger: '.intro-pin',
           start:
-            window.innerWidth > 620 ? 'top center-=300' : 'top center-=200',
+            window.innerWidth > 640 ? 'top center-=300' : 'top center-=200',
           end: '+=2000',
           pin: true,
           markers: false,
