@@ -1,3 +1,4 @@
+'use client';
 // @ts-expect-error the BubbleUI library does not support typescript
 import BubbleUI from 'react-bubble-ui';
 import 'react-bubble-ui/dist/index.css';
@@ -14,12 +15,12 @@ export default function StatsBubblesView() {
   const options = {
     size: 130,
     minSize: 40,
-    gutter: 32,
+    gutter: window.innerWidth > 640 ? 32 : 20,
     provideProps: false,
     numCols: 3,
     fringeWidth: 80,
     yRadius: 133,
-    xRadius: 180,
+    xRadius: window.innerWidth > 640 ? 180 : 130,
     cornerRadius: 50,
     showGuides: false,
     compact: true,

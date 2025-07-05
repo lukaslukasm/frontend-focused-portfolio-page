@@ -1,3 +1,4 @@
+'use client';
 import { cn } from '@/utils/cn';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';

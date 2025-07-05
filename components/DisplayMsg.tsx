@@ -12,7 +12,7 @@ type DisplayMsgProps = {
  * Big message with optional small text above. Main usage: Headings wrap.
  *
  * @param children - Required, content to be displayed inside.
- * @param category - Optional label above the heading.
+ * @param category - Optional label above the heading. Must not contain essential intormation
  * @param categoryColorCN - Optional Tailwind classes for the category label. Defaults to "text-primary".
  * @param className - Optional additional classes for the heading. Defaults to "".
  *
@@ -40,6 +40,7 @@ export default function DisplayMsg({
     >
       {!!category && (
         <span
+          aria-hidden={true}
           className={cn(
             'skill',
             'left-0',
