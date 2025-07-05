@@ -5,6 +5,7 @@ import 'react-bubble-ui/dist/index.css';
 import StatsBubble from './StatsBubble';
 import data from '../data/technologiesUsage.json';
 import { TechUsageData } from '@/types/types';
+import { useEffect, useState } from 'react';
 
 /**
  * Interactive component for displaying numbers of shipped deliverables per technology in apple watch app view fashion.
@@ -12,20 +13,25 @@ import { TechUsageData } from '@/types/types';
  * Renders static content and dynamic contnent from /data/technologiesUsage.json with layout, styling, a11y, and animations.
  */
 export default function StatsBubblesView() {
-  const options = {
-    size: 130,
-    minSize: 40,
-    gutter: window.innerWidth > 640 ? 32 : 20,
-    provideProps: false,
-    numCols: 3,
-    fringeWidth: 80,
-    yRadius: 133,
-    xRadius: window.innerWidth > 640 ? 180 : 130,
-    cornerRadius: 50,
-    showGuides: false,
-    compact: true,
-    gravitation: 5,
-  };
+  const [options, setOptions] = useState<object | null>(null);
+
+  useEffect(() => {
+    const opts = {
+      size: 130,
+      minSize: 40,
+      gutter: window.innerWidth > 640 ? 32 : 20,
+      provideProps: false,
+      numCols: 3,
+      fringeWidth: 80,
+      yRadius: 133,
+      xRadius: window.innerWidth > 640 ? 180 : 130,
+      cornerRadius: 50,
+      showGuides: false,
+      compact: true,
+      gravitation: 5,
+    };
+    setOptions(opts);
+  }, []);
 
   const bubbles = data.map((item, i) => (
     <StatsBubble
