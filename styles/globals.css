@@ -62,6 +62,14 @@
   .card.fav {
     @apply grayscale-0;
   }
+
+  .about-me--card {
+    @apply col flex-center relative col-span-4 overflow-hidden rounded-2xl bg-slate-100;
+
+    & > div {
+      @apply p-4;
+    }
+  }
 }
 
 @utility flex-center {

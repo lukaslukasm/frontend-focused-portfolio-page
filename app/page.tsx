@@ -1,5 +1,6 @@
 'use client';
 
+import AboutMe from '@/components/AboutMe';
 import Experience from '@/components/Experience';
 import Hero from '@/components/Hero';
 import Intro from '@/components/Intro';
@@ -12,6 +13,7 @@ function Page() {
       <Intro />
       <ShowcaseFeatures />
       <Experience />
+      <AboutMe />
     </main>
   );
 }
