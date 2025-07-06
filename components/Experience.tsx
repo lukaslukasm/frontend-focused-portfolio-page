@@ -144,7 +144,7 @@ function Experience() {
     >
       <DisplayMsg
         className="heading z-50 flex translate-y-8 opacity-0"
-        categoryClassName="text-orange-300"
+        categoryClassName="text-orange-400"
         category="Experience"
       >
         <h2>Technologies</h2>

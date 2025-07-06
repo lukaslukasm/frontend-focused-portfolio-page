@@ -41,7 +41,7 @@ function StatsSubSection() {
     >
       <DisplayMsg
         className="z-50 flex translate-y-8 opacity-0 max-lg:w-full lg:col-span-2"
-        categoryClassName="text-orange-300"
+        categoryClassName="text-orange-400"
         category="Experience"
       >
         <h2>In numbers</h2>
@@ -66,7 +66,7 @@ function StatsSubSection() {
         </p>
         <p className="text-text mt-4 text-xl font-bold sm:mt-16 sm:text-3xl">
           Deliverables shipped to date:{' '}
-          <span className="text-orange-500">53</span>
+          <span className="text-orange-400">53</span>
         </p>
       </div>
     </div>
