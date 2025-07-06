@@ -37,6 +37,7 @@ function CarouselSlide({ children, className = '' }: CarouselSlideProps) {
         'rounded-3xl',
         'bg-white',
         'drop-shadow-lg',
+        '[&_img]:pointer-events-none',
         className,
       )}
     >
