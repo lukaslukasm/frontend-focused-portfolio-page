@@ -3,6 +3,7 @@
 import Experience from '@/components/Experience';
 import Hero from '@/components/Hero';
 import Intro from '@/components/Intro';
+import OtherProjects from '@/components/OtherProjects';
 import ShowcaseFeatures from '@/components/ShowcaseFeatures';
 
 function Page() {
@@ -12,6 +13,7 @@ function Page() {
       <Intro />
       <ShowcaseFeatures />
       <Experience />
+      <OtherProjects />
     </main>
   );
 }
