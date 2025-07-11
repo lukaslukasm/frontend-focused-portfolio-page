@@ -7,6 +7,7 @@ import gsap from 'gsap';
 import { useRef } from 'react';
 import ExpandableCarouselSlide from './ExpandableCarouselSlide';
 import Image from 'next/image';
+import ExpandableCarouselSlide2 from './ExpandableCarouselSlide2';
 
 /**
  * Section component for displaying the other selected work.
@@ -50,7 +51,7 @@ function OtherProjects() {
         <h2>Other Projects</h2>
       </DisplayMsg>
       <Carousel className="[&_.carousel-arrows-nav]:translate-y-8 [&_.carousel-arrows-nav]:opacity-0 [&_.carousel-slide]:translate-y-8 [&_.carousel-slide]:opacity-0">
-        <ExpandableCarouselSlide
+        <ExpandableCarouselSlide2
           expandedContent={<h1>Hello world</h1>}
           btnClassName="bg-green-600 text-bg/80"
         >
@@ -58,15 +59,15 @@ function OtherProjects() {
             src="/images/wordel-poster.png"
             alt=""
             fill
-            className="absolute inset-0 h-full object-cover"
+            className="-z-10 object-cover"
           />
           <DisplayMsg
             category="Remembering veterans"
             categoryClassName="opacity-50 text-green-500"
           >
-            <h3 className="text-bg">Wordel</h3>
+            <h3 className="text-bg text-left">Wordel</h3>
           </DisplayMsg>
-        </ExpandableCarouselSlide>
+        </ExpandableCarouselSlide2>
         <ExpandableCarouselSlide
           expandedContent={<h1>toto je druhy slide</h1>}
           btnClassName="bg-green-600 text-bg/80"
@@ -84,22 +85,6 @@ function OtherProjects() {
             <h3 className="text-bg">nie Wordel</h3>
           </DisplayMsg>
         </ExpandableCarouselSlide>
-        <CarouselSlide className="bg-transparent !p-0 drop-shadow-none">
-          <img
-            src="https://www.apple.com/v/os/a/images/shared/liquid_glass/focus__ggpbjiev9i62_large.jpg"
-            alt=""
-          />
-          <div className="col flex gap-4 px-4 sm:px-8">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,
-              natus harum. Earum placeat nesciunt error autem iusto sed ipsum!
-              Nostrum?
-            </p>
-            <p className="text-sm opacity-50">
-              Lorem ipsum dolor sit amet consectetur elit.
-            </p>
-          </div>
-        </CarouselSlide>
         <CarouselSlide className="bg-yellow-300">
           <DisplayMsg
             category="Entertainment"
