@@ -89,7 +89,7 @@ function Header() {
   return (
     <nav
       className={cn(
-        'fixed inset-0 top-0 z-50 h-12 text-xl font-black transition-transform max-sm:m-2 sm:h-20 sm:px-4 sm:py-4 [&_a,button]:opacity-50 [&_a,button]:transition-opacity [&_a:hover,button:hover]:opacity-100 [&_button]:cursor-pointer',
+        'fixed inset-0 top-0 z-40 h-12 text-xl font-black transition-transform max-sm:m-2 sm:h-20 sm:px-4 sm:py-4 [&_a,button]:opacity-50 [&_a,button]:transition-opacity [&_a:hover,button:hover]:opacity-100 [&_button]:cursor-pointer',
         hideNav && !menuOpen && '-translate-y-20',
       )}
     >
