@@ -20,12 +20,13 @@ function ShowcaseFeatures() {
       gsap
         .timeline({
           scrollTrigger: {
-            trigger: '.carousel',
+            trigger: featuresRef.current,
+            start: 'top bottom+=50',
+            toggleActions: 'restart none none none',
           },
         })
         .to('.carousel-slide, .carousel-arrows-nav, .heading', {
           y: 0,
-          delay: 0.5,
           duration: 0.75,
           opacity: 1,
           stagger: 0.2,

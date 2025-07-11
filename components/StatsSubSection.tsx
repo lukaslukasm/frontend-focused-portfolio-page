@@ -20,12 +20,12 @@ function StatsSubSection() {
         .timeline({
           scrollTrigger: {
             trigger: statsSubsectionRef.current,
-            start: 'top center',
+            start: 'top bottom+=50',
+            toggleActions: 'restart none none none',
           },
         })
         .to('.statsSubsection > div', {
           y: 0,
-          delay: 0.5,
           duration: 0.75,
           opacity: 1,
           stagger: 0.2,
