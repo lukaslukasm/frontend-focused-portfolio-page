@@ -1,9 +1,13 @@
 import { cn } from '@/utils/cn';
-import { ReactNode } from 'react';
+import { KeyboardEventHandler, ReactNode, Ref } from 'react';
 
 type CarouselSlideProps = {
   children: ReactNode;
   className?: string;
+  onClick?: () => void;
+  onKeyDown?: KeyboardEventHandler<HTMLLIElement>;
+  ref?: Ref<HTMLLIElement>;
+  tabIndex?: number;
 };
 
 /**
@@ -11,12 +15,28 @@ type CarouselSlideProps = {
  *
  * @param children - Content to render inside the slide.
  * @param className - Optional additional class names for styling.
+ * @param onClick - Optional function to be run on click on the slide.
+ * @param tabIndex - Optional wether or not and if, then at what priority should be the slide selectable by a tab key.
+ * @param onKeyDown - Optional function to be run on key press wehn the slide is in focus.
+ * @param ref - Optional react reference object.
+ *
  */
 
-function CarouselSlide({ children, className = '' }: CarouselSlideProps) {
+function CarouselSlide({
+  children,
+  className = '',
+  onClick,
+  tabIndex,
+  onKeyDown,
+  ref,
+}: CarouselSlideProps) {
   return (
     <li
+      onClick={onClick}
       role="group"
+      ref={ref}
+      onKeyDown={onKeyDown}
+      tabIndex={tabIndex}
       aria-roledescription="slide"
       aria-label="slide"
       className={cn(

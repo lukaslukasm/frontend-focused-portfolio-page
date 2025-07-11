@@ -76,6 +76,10 @@
   @apply flex flex-col;
 }
 
+@utility custom-focus-visible {
+  @apply ring-5 ring-blue-500 outline-2 outline-white;
+}
+
 .topic-badge {
   @apply text-base font-black;
 }
