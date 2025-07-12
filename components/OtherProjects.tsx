@@ -5,9 +5,10 @@ import CarouselSlide from './CarouselSlide';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { useRef } from 'react';
-import ExpandableCarouselSlide from './ExpandableCarouselSlide';
 import Image from 'next/image';
-import ExpandableCarouselSlide2 from './ExpandableCarouselSlide2';
+import ExpandableCarouselSlide from './ExpandableCarouselSlide';
+import * as Dialog from '@radix-ui/react-dialog';
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 
 /**
  * Section component for displaying the other selected work.
@@ -51,38 +52,58 @@ function OtherProjects() {
         <h2>Other Projects</h2>
       </DisplayMsg>
       <Carousel className="[&_.carousel-arrows-nav]:translate-y-8 [&_.carousel-arrows-nav]:opacity-0 [&_.carousel-slide]:translate-y-8 [&_.carousel-slide]:opacity-0">
-        <ExpandableCarouselSlide2
-          expandedContent={<h1>Hello world</h1>}
+        <ExpandableCarouselSlide
+          expandedContent={
+            <div className="col flex">
+              <VisuallyHidden>
+                <Dialog.Title>Hello world</Dialog.Title>
+                <Dialog.Description>Hello world</Dialog.Description>
+              </VisuallyHidden>
+              <h1>this is the content of expanded carousel slide</h1>
+              <button>button</button>
+            </div>
+          }
           btnClassName="bg-green-600 text-bg/80"
         >
           <Image
             src="/images/wordel-poster.png"
             alt=""
-            fill
-            className="-z-10 object-cover"
+            width={360}
+            height={600}
+            className="absolute inset-0 -z-10 object-cover"
           />
           <DisplayMsg
-            category="Remembering veterans"
-            categoryClassName="opacity-50 text-green-500"
+            category="Going strong for 3yrs 💪"
+            categoryClassName="text-green-700"
           >
             <h3 className="text-bg text-left">Wordel</h3>
           </DisplayMsg>
-        </ExpandableCarouselSlide2>
+        </ExpandableCarouselSlide>
         <ExpandableCarouselSlide
-          expandedContent={<h1>toto je druhy slide</h1>}
+          expandedContent={
+            <div className="col flex">
+              <VisuallyHidden>
+                <Dialog.Title>Hello world</Dialog.Title>
+                <Dialog.Description>Hello world</Dialog.Description>
+              </VisuallyHidden>
+              <h1>the second slide expandable</h1>
+              <button>button</button>
+            </div>
+          }
           btnClassName="bg-green-600 text-bg/80"
         >
           <Image
             src="/images/wordel-poster.png"
             alt=""
-            fill
-            className="absolute inset-0 h-full object-cover"
+            width={360}
+            height={600}
+            className="absolute inset-0 -z-10 object-cover"
           />
           <DisplayMsg
-            category="Remembering veterans"
-            categoryClassName="opacity-50 text-green-500"
+            category="Going strong for 3yrs 💪"
+            categoryClassName="text-green-700"
           >
-            <h3 className="text-bg">nie Wordel</h3>
+            <h3 className="text-bg text-left">Wordel</h3>
           </DisplayMsg>
         </ExpandableCarouselSlide>
         <CarouselSlide className="bg-yellow-300">

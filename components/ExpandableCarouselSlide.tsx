@@ -1,35 +1,27 @@
-'use client';
 import { cn } from '@/utils/cn';
-import { useGSAP } from '@gsap/react';
-import { ReactNode, useRef, useState } from 'react';
-import { createPortal } from 'react-dom';
+import * as Dialog from '@radix-ui/react-dialog';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 import CarouselSlide from './CarouselSlide';
+import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import OverlayContainer from './OverlayContainer';
 
 type ExpandableCarouselSlideProps = {
   children: ReactNode;
-  btnClassName?: string;
   expandedContent: ReactNode;
+  btnClassName?: string;
+  className?: string;
 };
 
-/**
- * A wrapper component for individual carousel slides, which require more content.
- *
- * @param children - contains slide's face content
- * @param expandedContent - slide's expandable content, meant to be shown after click in the overlay.
- * @param btnClassName - optional classNames for a small plus button styling located in the corner of the slide's face. The icon uses `currentColor` as its stroke color.
- *
- * Returns a `CarouselSlide` component which upon click opens model overlay of `expandedContent`.
- *
- */
-function ExpandableCarouselSlide({
+const ExpandableCarouselSlide = ({
   children,
   btnClassName = '',
+  className = '',
   expandedContent,
-}: ExpandableCarouselSlideProps) {
+}: ExpandableCarouselSlideProps) => {
   const expandableCarouselSlideRef = useRef<HTMLLIElement>(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false); // mounting/unmounting of the modal
+  const [open, setOpen] = useState(false); // graceful opening closing, with animation
 
   useGSAP(
     () => {
@@ -62,54 +54,102 @@ function ExpandableCarouselSlide({
     { scope: expandableCarouselSlideRef },
   );
 
-  return (
-    <>
-      <CarouselSlide
-        ref={expandableCarouselSlideRef}
-        className="focus-visible:custom-focus-visible cursor-pointer"
-        onClick={() => setIsOpen(true)}
-        tabIndex={0}
-        onKeyDown={(e) =>
-          (e.key === ' ' || e.key === 'Enter') && setIsOpen(true)
-        }
-      >
-        {children}
-        <div
-          className={cn(
-            'bg-text',
-            'rounded-full',
-            'p-1.5',
-            'absolute',
-            'bottom-6',
-            'right-6',
-            btnClassName,
-          )}
-          onClick={() => setIsOpen(true)}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={4}
-            stroke="currentColor"
-            className="w-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 4.5v15m7.5-7.5h-15"
-            />
-          </svg>
-        </div>
-      </CarouselSlide>
-      {isOpen &&
-        createPortal(
-          <OverlayContainer unMountFn={() => setIsOpen(false)}>
-            {expandedContent}
-          </OverlayContainer>,
-          document.body,
-        )}
-    </>
+  useEffect(() => {
+    if (open) setMounted(true);
+  }, [open]);
+
+  useGSAP(
+    () => {
+      if (!open && !!overlayRef.current)
+        gsap
+          .timeline({ onComplete: () => setMounted(false) })
+          .fromTo(
+            overlayRef.current,
+            { opacity: 1 },
+            { opacity: 0, duration: 0.4 },
+          )
+          .play();
+    },
+    {
+      scope: expandableCarouselSlideRef,
+      dependencies: [open],
+    },
   );
-}
+
+  return (
+    <CarouselSlide
+      ref={expandableCarouselSlideRef}
+      className={cn(
+        'focus-visible:custom-focus-visible',
+        'cursor-pointer',
+        'overflow-visible',
+        '!p-0',
+        className,
+      )}
+    >
+      <Dialog.Root open={mounted} onOpenChange={setOpen}>
+        <Dialog.Trigger className="focus-visible:custom-focus-visible col relative flex h-full w-full cursor-pointer rounded-3xl p-4 text-left sm:p-8">
+          {children}
+        </Dialog.Trigger>
+        <Dialog.Portal>
+          <Dialog.Overlay
+            ref={overlayRef}
+            className={cn(
+              'fixed inset-0 isolate z-50 flex w-screen justify-center overflow-auto bg-black/30 backdrop-blur-xl',
+              open && 'animate-opacityy',
+            )}
+          >
+            <Dialog.Content className="focus-visible:custom-focus-visible bg-bg col mx-4 my-4 flex h-[150svh] w-full max-w-[60rem] rounded-xl p-4 pt-4 sm:my-12 sm:rounded-3xl sm:p-12 sm:pt-6">
+              <Dialog.Close className="bg-text text-bg/70 hover:text-bg focus-visible:custom-focus-visible sticky top-4 cursor-pointer self-end rounded-full p-1.5 transition-colors sm:top-6 sm:-mr-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={3}
+                  stroke="currentColor"
+                  className="w-6 rotate-z-45"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 4.5v15m7.5-7.5h-15"
+                  />
+                </svg>
+              </Dialog.Close>
+              {expandedContent}
+            </Dialog.Content>
+          </Dialog.Overlay>
+        </Dialog.Portal>
+      </Dialog.Root>
+      <div
+        className={cn(
+          'bg-text',
+          'text-bg/80',
+          'rounded-full',
+          'p-1.5',
+          'absolute',
+          'bottom-6',
+          'right-6',
+          btnClassName,
+        )}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={4}
+          stroke="currentColor"
+          className="w-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 4.5v15m7.5-7.5h-15"
+          />
+        </svg>
+      </div>
+    </CarouselSlide>
+  );
+};
+
 export default ExpandableCarouselSlide;

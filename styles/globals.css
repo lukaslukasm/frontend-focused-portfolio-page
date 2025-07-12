@@ -6,6 +6,17 @@
   --color-primary: var(--color-cyan-600);
   --color-bg: var(--color-cyan-50);
   --responsive-gutter-width: max(calc(((100vw - 1440px + 2rem) / 2)), 1rem);
+  --animate-opacityy: 0.5s opacityy ease-in-out;
+}
+
+@keyframes opacityy {
+  0% {
+    opacity: 0;
+  }
+  ,
+  100% {
+    opacity: 1;
+  }
 }
 
 @layer base {
