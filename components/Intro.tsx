@@ -92,7 +92,7 @@ function Intro() {
         <div className="col relative flex gap-10 overflow-x-visible overflow-y-hidden sm:gap-20">
           <DisplayMsg category="Selected Work" className="heading opacity-0">
             <div className="flex items-center gap-4">
-              <h2 className="">Crypto Dashboard</h2>
+              <h2 className="">Coming Soon</h2>
               <a
                 href="#"
                 target="_blank"
@@ -124,10 +124,10 @@ function Intro() {
                   alt="Macbook mockup"
                   className="object-contain"
                 />
-                <div className="absolute top-[6%] right-[8%] left-[8%] aspect-video">
+                <div className="absolute top-[2.9%] right-[12.3%] left-[12.3%] aspect-[16/10.41] overflow-hidden rounded-t-xl">
                   <Image
                     alt="dashboard"
-                    className="object-contain"
+                    className="h-full object-contain"
                     fill
                     src="/images/dashboard-placeholder.png"
                   />

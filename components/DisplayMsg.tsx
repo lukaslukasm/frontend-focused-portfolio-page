@@ -48,7 +48,7 @@ export default function DisplayMsg({
             '-mb-1',
             'sm:text-base',
             'text-xs',
-            'font-black',
+            'font-bold',
             categoryClassName,
           )}
         >
