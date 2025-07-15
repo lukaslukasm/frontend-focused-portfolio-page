@@ -41,7 +41,7 @@ function CarouselSlide({
       aria-label="slide"
       className={cn(
         'carousel-slide',
-        'sm:aspect-[3/5]',
+        'aspect-[3/5]',
         'relative',
         'sm:w-88',
         'w-64',
