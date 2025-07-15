@@ -33,12 +33,12 @@ function StatsBubble({ className = '', data }: StatsBubbleProps) {
             fill
             unoptimized
             className="rounded-lg object-contain"
-            alt={data.label + ' logo'}
+            alt={`${data.label} logo`}
           />
         </div>
       )}
       <div className="flex-center col relative z-10">
-        <span className="text-center text-base leading-tight font-black opacity-40">
+        <span className="text-center text-base leading-tight font-bold opacity-40">
           {data.label}
         </span>
         {!!data.value && (
