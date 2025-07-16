@@ -97,30 +97,30 @@ function Header() {
         {/* desktop navbar */}
         <ul className="flex w-full gap-8 max-sm:hidden [&_li]:flex [&_li]:items-center">
           {/* logo */}
-          <li>
-            <Link href="/" aria-label="Go to Homepage" className="">
-              Home
-            </Link>
+          <li className="from-text bg-gradient-to-r to-cyan-500 bg-clip-text text-transparent">
+            Available starting October
           </li>
-          <div className="flex-grow" aria-hidden></div>
+          <li className="flex-grow" aria-hidden></li>
           <li>
-            <Link
-              aria-label="Go to portfolio page"
-              href="/portfolio"
-              className="flex items-center"
+            <button
+              type="button"
+              aria-label="Scroll to about section"
+              onClick={() =>
+                gsap.to(window, { duration: 1, scrollTo: '#experience' })
+              }
             >
-              Portfolio
-            </Link>
+              Experience
+            </button>
           </li>
           <li>
             <button
               type="button"
               aria-label="Scroll to about section"
               onClick={() =>
-                gsap.to(window, { duration: 1, scrollTo: '#about' })
+                gsap.to(window, { duration: 1, scrollTo: '#portfolio' })
               }
             >
-              About
+              Portfolio
             </button>
           </li>
           <li>
@@ -146,52 +146,31 @@ function Header() {
           aria-modal="true"
           aria-hidden={!menuOpen}
           inert={!menuOpen}
-          className={cn(
-            'mobile-nav-wrapper',
-            'fixed',
-            'inset-0',
-            'z-40',
-            'h-dvh',
-            '-translate-y-full',
-            'bg-gray-100',
-            'opacity-50',
-          )}
+          className="mobile-nav-wrapper fixed inset-0 z-40 h-dvh -translate-y-full bg-gray-100 opacity-50"
         >
           <ul className="col mt-20 ml-8 flex gap-4">
             <li>
-              <Link
-                ref={mobileNavFirstLink}
-                href="/"
+              <button
+                type="button"
+                aria-label="Scroll to contact section"
                 onClick={() => {
                   setMenuOpen(false);
+                  gsap.to(window, { duration: 1, scrollTo: '#experience' });
                 }}
-                aria-label="Go to Homepage"
               >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                aria-label="Go to portfolio page"
-                href="/portfolio"
-                onClick={() => {
-                  setMenuOpen(false);
-                }}
-                className="flex w-max items-center"
-              >
-                Portfolio
-              </Link>
+                Experience
+              </button>
             </li>
             <li>
               <button
                 type="button"
-                aria-label="Scroll to about section"
+                aria-label="Scroll to contact section"
                 onClick={() => {
                   setMenuOpen(false);
-                  gsap.to(window, { duration: 1, scrollTo: '#about' });
+                  gsap.to(window, { duration: 1, scrollTo: '#portfolio' });
                 }}
               >
-                About
+                Portfolio
               </button>
             </li>
             <li>
@@ -208,7 +187,11 @@ function Header() {
             </li>
           </ul>
         </div>
-        <div className="flex-center gap-2">
+        <div className="flex-center w-full gap-2 sm:hidden">
+          <span className="from-text bg-gradient-to-r to-cyan-500 bg-clip-text text-transparent max-sm:text-sm">
+            Available starting October
+          </span>
+          <div className="flex-grow"></div>
           <div
             aria-hidden={menuOpen}
             inert={menuOpen}

@@ -89,7 +89,10 @@ function Intro() {
             </div>
           </div>
         </div>
-        <div className="col relative flex gap-10 overflow-x-visible overflow-y-hidden sm:gap-20">
+        <div
+          id="showcase"
+          className="col relative flex gap-10 overflow-x-visible overflow-y-hidden sm:gap-20"
+        >
           <DisplayMsg category="Selected Work" className="heading opacity-0">
             <div className="flex items-center gap-4">
               <h2 className="">Coming Soon</h2>

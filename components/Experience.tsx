@@ -139,6 +139,7 @@ function Experience() {
 
   return (
     <section
+      id="experience"
       ref={experienceRef}
       className="experience relative h-auto gap-0 overflow-x-visible"
     >
