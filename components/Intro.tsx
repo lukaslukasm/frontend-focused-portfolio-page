@@ -93,7 +93,7 @@ function Intro() {
           id="showcase"
           className="col relative flex gap-10 overflow-x-visible overflow-y-hidden sm:gap-20"
         >
-          <DisplayMsg category="Selected Work" className="heading opacity-0">
+          <DisplayMsg category="Skill Showcase" className="heading opacity-0">
             <div className="flex items-center gap-4">
               <h2 className="">Coming Soon</h2>
               <a
