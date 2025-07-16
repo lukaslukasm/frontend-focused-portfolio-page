@@ -45,7 +45,6 @@ export default function DisplayMsg({
             'skill',
             'left-0',
             'text-primary',
-            '-mb-1',
             'sm:text-base',
             'text-xs',
             'font-bold',
