@@ -1,5 +1,4 @@
 import { cn } from '@/utils/cn';
-import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import gsap from 'gsap';
