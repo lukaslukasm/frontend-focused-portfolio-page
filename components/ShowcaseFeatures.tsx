@@ -42,7 +42,7 @@ function ShowcaseFeatures() {
     >
       <DisplayMsg
         className="heading mb-4 ml-[var(--responsive-gutter-width)] translate-y-8 opacity-0"
-        category="Selected Work"
+        category="Skill Showcase"
       >
         <h2>Features</h2>
       </DisplayMsg>
