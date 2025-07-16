@@ -43,17 +43,12 @@ function Intro() {
         .timeline({
           scrollTrigger: {
             trigger: '.heading',
-            start: 'top bottom-=200',
+            start: 'top bottom+=100',
             toggleActions: 'restart none none none',
             markers: false,
           },
         })
-        .fromTo(
-          '.heading',
-          { opacity: 0, y: -20 },
-          { opacity: 1, y: 0, duration: 0.5 },
-        )
-        .addLabel('showDashboard')
+        .to('.heading', { opacity: 1, y: 0, duration: 0.5 })
         .fromTo(
           '.dashboard',
           { y: '80vh' },
@@ -93,7 +88,10 @@ function Intro() {
           id="showcase"
           className="col relative flex gap-10 overflow-x-visible overflow-y-hidden sm:gap-20"
         >
-          <DisplayMsg category="Skill Showcase" className="heading opacity-0">
+          <DisplayMsg
+            category="Skill Showcase"
+            className="heading translate-y-8 opacity-0"
+          >
             <div className="flex items-center gap-4">
               <h2 className="">Coming Soon</h2>
               <a
