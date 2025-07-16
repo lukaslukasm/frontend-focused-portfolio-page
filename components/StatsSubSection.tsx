@@ -62,7 +62,7 @@ function StatsSubSection() {
           >
             deliverables
           </span>{' '}
-          I’ve shipped using each technology.
+          I’ve shipped using each technology over the past 3 years.
         </p>
         <p className="text-text mt-4 text-xl font-bold sm:mt-16 sm:text-3xl">
           Deliverables shipped to date:{' '}
