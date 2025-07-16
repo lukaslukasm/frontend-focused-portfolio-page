@@ -1,16 +1,20 @@
 'use client';
 
+import Experience from '@/components/Experience';
 import Hero from '@/components/Hero';
-// import Intro from '@/components/Intro';
-// import ShowcaseFeatures from '@/components/ShowcaseFeatures';
+import Intro from '@/components/Intro';
+import OtherProjects from '@/components/OtherProjects';
+import ShowcaseFeatures from '@/components/ShowcaseFeatures';
 
 function Page() {
-	return (
-		<main className='max-w-[min(90rem,100%)] mx-auto px-4 w-full flex-center col'>
-			<Hero />
-			{/* <Intro /> */}
-			{/* <ShowcaseFeatures /> */}
-		</main>
-	);
+  return (
+    <main className="flex-center col w-full">
+      <Hero />
+      <Intro />
+      <ShowcaseFeatures />
+      <Experience />
+      <OtherProjects />
+    </main>
+  );
 }
 export default Page;
