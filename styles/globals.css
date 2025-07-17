@@ -2,7 +2,8 @@
 
 @theme {
   --breakpoint-xs: 27rem;
-  --color-text: var(--color-gray-600);
+  --color-text: var(--color-gray-400);
+  --color-highlight: var(--color-gray-600);
   --color-primary: var(--color-cyan-600);
   --color-bg: var(--color-cyan-50);
   --responsive-gutter-width: max(calc(((100vw - 1440px + 2rem) / 2)), 1rem);

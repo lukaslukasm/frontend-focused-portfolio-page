@@ -46,7 +46,7 @@ function Hero() {
           Hello, I&apos;m Lukas.
         </div>
         <div>
-          <h1 className="from-text to-text xs:text-5xl invisible relative bg-gradient-to-r from-10% via-cyan-400 to-90% bg-size-[200%] bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-7xl">
+          <h1 className="from-highlight to-highlight xs:text-5xl invisible relative bg-gradient-to-r from-10% via-cyan-400 to-90% bg-size-[200%] bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-7xl">
             Your next Frontend&nbsp;developer.
           </h1>
         </div>

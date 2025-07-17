@@ -80,11 +80,11 @@ function Projects() {
               category="Engineered for zero friction"
               categoryClassName="text-green-600"
             >
-              <h3 className="text-text text-left text-[1.4rem] sm:text-[1.8rem]">
+              <h3 className="text-highlight text-left text-[1.4rem] sm:text-[1.8rem]">
                 Reservation System
               </h3>
             </DisplayMsg>
-            <p className="text-text mt-2 text-sm opacity-70 sm:text-base">
+            <p className="text-highlight mt-2 text-sm opacity-70 sm:text-base">
               A simple reservation system made using the finest frontend
               practices used by the industry.
             </p>
@@ -150,7 +150,7 @@ function Projects() {
             category="Advanced gestures"
             categoryClassName="text-green-600"
           >
-            <h3 className="text-text text-left">Jewelry Wizard</h3>
+            <h3 className="text-highlight text-left">Jewelry Wizard</h3>
           </DisplayMsg>
           <p className="text-text mt-2 text-sm opacity-70 sm:text-base">
             A multi-step, input-driven branching wizard with navigation and
@@ -170,7 +170,7 @@ function Projects() {
           }
           btnClassName="bg-green-600 text-bg/80"
         >
-          <div className="from-text absolute top-0 bottom-0 left-0 -z-10 size-full overflow-hidden rounded-3xl bg-gradient-to-br to-cyan-500"></div>
+          <div className="from-highlight absolute top-0 bottom-0 left-0 -z-10 size-full overflow-hidden rounded-3xl bg-gradient-to-br to-cyan-500"></div>
           <DisplayMsg
             category="Me 🤝 Self-torture"
             categoryClassName="text-green-600"
@@ -194,7 +194,7 @@ function Projects() {
               category="Latest Work"
               categoryClassName="text-green-600"
             >
-              <h3 className="text-text">Skill Showcase</h3>
+              <h3 className="text-highlight">Skill Showcase</h3>
             </DisplayMsg>
             <p className="text-text mt-2 text-sm opacity-90 sm:text-base">
               Coming soon.
