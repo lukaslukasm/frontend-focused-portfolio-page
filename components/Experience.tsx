@@ -165,7 +165,7 @@ function Experience() {
             </h2>
           </DisplayMsg>
         </div>
-        <div className="wheels absolute-center col-span-2 row-span-2 w-[min(100%,60rem)] overflow-hidden sm:mt-24">
+        <div className="wheels absolute-center col-span-2 row-span-2 w-[min(100%,60rem)] overflow-hidden">
           <SmallWheelLogos />
           <BigWheelLogos />
         </div>
