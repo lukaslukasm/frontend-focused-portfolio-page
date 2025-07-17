@@ -16,7 +16,7 @@ import CarouselSlide from './CarouselSlide';
  * Renders static content with layout, styling, and animations.
  */
 
-function OtherProjects() {
+function Projects() {
   const otherProjectsRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -221,4 +221,4 @@ function OtherProjects() {
     </section>
   );
 }
-export default OtherProjects;
+export default Projects;

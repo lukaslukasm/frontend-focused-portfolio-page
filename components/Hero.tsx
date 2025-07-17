@@ -2,6 +2,11 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 
+/**
+ * Section component for displaying the website's Hero section.
+ *
+ * Renders static content with layout, styling, and animations.
+ */
 function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
 

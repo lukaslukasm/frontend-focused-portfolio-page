@@ -12,7 +12,7 @@ type CarouselProps = {
 /**
  * A horizontal scrollable carousel component with drag and  scroll support and arrow navigation.
  *
- * Expects children to be one or more `<CarouselSlide />` components.
+ * Expects children to be one or more `<CarouselSlide />` or `<ExpandableCarouselSlide />` components.
  * Handles mouse dragging, arrow button scrolling, and disables arrows
  * when scrolling reaches either end.
  *
@@ -20,7 +20,7 @@ type CarouselProps = {
  * ```tsx
  * <Carousel>
  *   <CarouselSlide>...</CarouselSlide>
- *   <CarouselSlide>...</CarouselSlide>
+ *   <ExpandableCarouselSlide expandedContent={...}>...</ExpandableCarouselSlide>
  * </Carousel>
  * ```
  *

@@ -4,6 +4,11 @@ import DisplayMsg from './DisplayMsg';
 import gsap from 'gsap';
 import { useRef } from 'react';
 
+/**
+ * Footer component for displaying the website's contact section and story wrap.
+ *
+ * Renders static content with layout, styling, and animations.
+ */
 function Footer() {
   const footerRef = useRef<HTMLDivElement>(null);
   const tl = useRef<GSAPTimeline>(null);

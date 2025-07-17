@@ -12,6 +12,20 @@ type ExpandableCarouselSlideProps = {
   className?: string;
 };
 
+/**
+ * A wrapper component for individual carousel slides that supports overlay content display on click.
+ * Fully accessible, responsive, animated.
+ *
+ * @param children - the content of the slide
+ * @param expandedContent - the content of the overlay.
+ * @param btnClassName - (optional) classname for changing the plus button styles. The icon uses `currentColor`.
+ * @param className - (optional) classes for altering slide's styling.
+ *
+ *
+ *
+ * @returns a carousel slide with the `children` param on the slide, plus icon in a circle in the right bottom corner.
+ *
+ */
 const ExpandableCarouselSlide = ({
   children,
   btnClassName = '',
