@@ -78,7 +78,7 @@ function ShowcaseFeatures() {
             category="Entertainment"
             categoryClassName=" text-white/50"
           >
-            <h3 className="text-white">Traumatised kids</h3>
+            <h3 className="text-white">Traumatized kids</h3>
           </DisplayMsg>
           <div className="flex-grow"></div>
           <img

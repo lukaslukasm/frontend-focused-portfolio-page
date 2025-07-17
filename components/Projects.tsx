@@ -150,7 +150,7 @@ function Projects() {
             category="Advanced gestures"
             categoryClassName="text-green-600"
           >
-            <h3 className="text-text text-left">Jewerly Wizard</h3>
+            <h3 className="text-text text-left">Jewelry Wizard</h3>
           </DisplayMsg>
           <p className="text-text mt-2 text-sm opacity-70 sm:text-base">
             A multi-step, input-driven branching wizard with navigation and
