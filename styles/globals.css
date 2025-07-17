@@ -6,7 +6,8 @@
   --color-highlight: var(--color-gray-600);
   --color-primary: var(--color-cyan-600);
   --color-bg: var(--color-cyan-50);
-  --responsive-gutter-width: max(calc(((100vw - 1440px + 2rem) / 2)), 1rem);
+  /* --responsive-gutter-width: max(calc(((100vw - 1120px) / 2)), 1rem); */
+  --responsive-gutter-width: max(calc(((100vw - 1120px) / 2)), 6vw);
   --animate-opacityy: 0.5s opacityy ease-in-out;
 }
 
@@ -22,7 +23,7 @@
 
 @layer base {
   section {
-    @apply col mx-auto flex w-[min(90rem,100%)] gap-10 overflow-x-hidden px-4 py-20 sm:gap-20 sm:py-40;
+    @apply col mx-auto flex gap-10 overflow-x-hidden px-[var(--responsive-gutter-width)] py-20 lg:gap-20 lg:py-30;
   }
 
   body > * {

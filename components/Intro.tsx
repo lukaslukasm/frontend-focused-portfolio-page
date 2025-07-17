@@ -68,9 +68,9 @@ function Intro() {
   return (
     <>
       <section className="" ref={introRef}>
-        <div className="h-[360svh] sm:h-[210svh]">
+        <div className="h-[360svh] lg:h-[260svh]">
           <div className="intro-pin">
-            <div className="intro col mx-auto flex max-w-[900px] gap-8">
+            <div className="intro col mx-auto flex max-w-[1000px] gap-8">
               <DisplayMsg className="text-text translate-y-8 leading-[1.2] opacity-0 max-sm:text-3xl">
                 After wearing the fullstack hat for 3 years now,
               </DisplayMsg>
