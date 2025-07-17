@@ -121,11 +121,11 @@ function Intro() {
               <div className="relative aspect-video w-full">
                 <Image
                   fill
-                  src="/images/macbook-mockup.jpg"
-                  alt="Macbook mockup"
+                  src="/images/device-mockups/ntb.png"
+                  alt="Notebook mockup"
                   className="object-contain"
                 />
-                <div className="absolute top-[2.9%] right-[12.3%] left-[12.3%] aspect-[16/10.41] overflow-hidden rounded-t-xl">
+                <div className="absolute top-[2.5%] right-[13.1%] left-[13.1%] aspect-[16/10.41] overflow-hidden sm:rounded-t-xl">
                   <Image
                     alt="dashboard"
                     className="h-full object-contain"
