@@ -132,7 +132,7 @@ function Header() {
               className="bg-text relative isolate overflow-hidden rounded-full !opacity-100 hover:[&_.blue-bg]:opacity-100"
             >
               <div className="blue-bg bg-primary absolute inset-0 opacity-0 transition-opacity"></div>
-              <div className="gradient-border from-primary to-primary absolute top-1/2 left-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 bg-conic-180 via-transparent blur-md"></div>
+              <div className="gradient-border from-primary to-primary absolute top-1/2 left-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 bg-conic-180 from-0% via-transparent blur-md"></div>
               <div className="relative z-10 rounded-full px-5 py-3 leading-none font-bold text-white">
                 Contact
               </div>
