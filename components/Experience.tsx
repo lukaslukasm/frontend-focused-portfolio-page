@@ -151,7 +151,7 @@ function Experience() {
         <h2>Technologies</h2>
       </DisplayMsg>
       <div className="relative min-h-[90vh] sm:min-h-[70vh]">
-        <div className="col absolute-center z-10 flex w-11/12">
+        <div className="col absolute-center z-10 flex w-full">
           <DisplayMsg className="line1 translate-y-10 -rotate-x-45 opacity-0">
             <p className="bg-linear-to-t from-transparent via-cyan-50 to-transparent py-32 text-center text-5xl leading-[1.2] font-bold max-sm:text-3xl">
               Over the past few years, I&apos;ve worked <br /> with a wide range

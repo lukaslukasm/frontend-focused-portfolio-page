@@ -37,7 +37,7 @@ function StatsSubSection() {
   return (
     <div
       ref={statsSubsectionRef}
-      className="statsSubsection max-lg:flex-center mt-24 grid-cols-2 flex-col gap-12 sm:mt-48 lg:grid lg:gap-32"
+      className="statsSubsection max-lg:flex-center mt-24 grid-cols-2 flex-col gap-12 sm:mt-48 lg:grid"
     >
       <DisplayMsg
         className="z-50 flex translate-y-8 opacity-0 max-lg:w-full lg:col-span-2"
@@ -51,7 +51,7 @@ function StatsSubSection() {
       </div>
       <div className="translate-y-8 opacity-0 lg:mt-10">
         <Tooltip id="my-tooltip" />
-        <p className="text-text text-xl leading-[1.2] font-bold tracking-wide sm:text-3xl">
+        <p className="text-text leading-[1.2] font-bold tracking-wide sm:text-3xl">
           Rather than labelling my skills with vague terms like
           &apos;intermediate&apos; or &apos;advanced&apos;, here is{' '}
           <span className="text-highlight">
@@ -64,7 +64,7 @@ function StatsSubSection() {
             >
               deliverables
             </span>{' '}
-            I’ve shipped{' '}
+            I’ve shipped
           </span>{' '}
           using each technology over the past 3 years.
         </p>
