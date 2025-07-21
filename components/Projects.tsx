@@ -9,7 +9,7 @@ import ExpandableCarouselSlide from './ExpandableCarouselSlide';
 import * as Dialog from '@radix-ui/react-dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import CarouselSlide from './CarouselSlide';
-
+import WordelContent from '@/content/WordelContent';
 /**
  * Section component for displaying the other selected work.
  *
@@ -91,16 +91,7 @@ function Projects() {
           </div>
         </ExpandableCarouselSlide>
         <ExpandableCarouselSlide
-          expandedContent={
-            <div className="col flex">
-              <VisuallyHidden>
-                <Dialog.Title>Hello world</Dialog.Title>
-                <Dialog.Description>Hello world</Dialog.Description>
-              </VisuallyHidden>
-              <h1>this is the content of expanded carousel slide</h1>
-              <button>button</button>
-            </div>
-          }
+          expandedContent={<WordelContent />}
           btnClassName="bg-green-600 text-bg/80"
         >
           <div className="absolute inset-0 -right-10 -z-10 size-full overflow-hidden rounded-3xl">
@@ -152,7 +143,7 @@ function Projects() {
           >
             <h3 className="text-highlight text-left">Jewelry Wizard</h3>
           </DisplayMsg>
-          <p className="text-text mt-2 text-sm opacity-70 sm:text-base">
+          <p className="text-highlight mt-2 text-sm opacity-70 sm:text-base">
             A multi-step, input-driven branching wizard with navigation and
             granular gestures handling.
           </p>
@@ -164,8 +155,6 @@ function Projects() {
                 <Dialog.Title>Klenotnicky Radca</Dialog.Title>
                 <Dialog.Description></Dialog.Description>
               </VisuallyHidden>
-              <h1>this is the content of expanded carousel slide</h1>
-              <button>button</button>
             </div>
           }
           btnClassName="bg-green-600 text-bg/80"
