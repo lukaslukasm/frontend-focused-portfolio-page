@@ -27,55 +27,55 @@ function BigWheelLogos() {
     <div className="absolute inset-0">
       <LogosWheel
         radiusWidthMobile={160}
-        radiusWidthDesktop={340}
+        radiusWidthDesktop={290}
         spinDirection="left"
       >
-        <div className="card fav size-12 sm:size-24">
+        <div className="card fav size-12 md:size-20">
           <Image src={next} alt="Next.js logo" />
         </div>
-        <div className="card size-12 sm:size-24">
+        <div className="card size-12 md:size-20">
           <Image src={bootstrap} alt="Bootstrap logo" />
         </div>
-        <div className="card size-12 sm:size-24">
+        <div className="card size-12 md:size-20">
           <Image src={builderio} alt="Builder.io logo" />
         </div>
-        <div className="card size-12 sm:size-24">
+        <div className="card size-12 md:size-20">
           <Image src={docker} alt="Docker logo" />
         </div>
-        <div className="card fav size-12 sm:size-24">
+        <div className="card fav size-12 md:size-20">
           <Image src={filament} alt="Filament logo" />
         </div>
-        <div className="card size-12 sm:size-24">
+        <div className="card size-12 md:size-20">
           <Image src={wordpress} alt="Wordpress logo" />
         </div>
-        <div className="card size-12 sm:size-24">
+        <div className="card size-12 md:size-20">
           <Image src={alpine} alt="Alpine logo" />
         </div>
-        <div className="card size-12 sm:size-24">
+        <div className="card size-12 md:size-20">
           <Image src={phpslim} alt="PHP SLim logo" />
         </div>
-        <div className="card fav size-12 sm:size-24">
+        <div className="card fav size-12 md:size-20">
           <Image src={shopify} alt="Shopify logo" />
         </div>
-        <div className="card size-12 sm:size-24">
+        <div className="card size-12 md:size-20">
           <Image src={jquery} alt="JQuery logo" />
         </div>
-        <div className="card size-12 sm:size-24">
+        <div className="card size-12 md:size-20">
           <Image src={framer} alt="Bootstrap logo" />
         </div>
-        <div className="card size-12 sm:size-24">
+        <div className="card size-12 md:size-20">
           <Image src={hubspot} alt="Hubspot logo" />
         </div>
-        <div className="card fav size-12 sm:size-24">
+        <div className="card fav size-12 md:size-20">
           <Image src={gsapLogo} alt="GSAP logo" />
         </div>
-        <div className="card size-12 sm:size-24">
+        <div className="card size-12 md:size-20">
           <Image src={drupal} alt="Drupal logo" />
         </div>
-        <div className="card size-12 sm:size-24">
+        <div className="card size-12 md:size-20">
           <Image src={woo} alt="Woocommerce logo" />
         </div>
-        <div className="card size-12 sm:size-24">
+        <div className="card size-12 md:size-20">
           <Image
             src={email}
             alt="Icon illustrating Coding Custom email templates"

@@ -16,7 +16,7 @@ function StatsBubble({ className = '', data }: StatsBubbleProps) {
         'flex-center col',
         'relative',
         'isolate',
-        'text-text',
+        'text-highlight',
         'text-lg',
         'p-2',
         'overflow-hidden',

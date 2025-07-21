@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import gsap from '../utils/registerGsap';
 import DisplayMsg from './DisplayMsg';
+import LinkButton from './LinkButton';
 
 /**
  * Section component for displaying the website's Introduction.
@@ -68,17 +69,17 @@ function Intro() {
   return (
     <>
       <section className="" ref={introRef}>
-        <div className="h-[360svh] sm:h-[210svh]">
+        <div className="h-[360svh] lg:h-[260svh]">
           <div className="intro-pin">
-            <div className="intro col mx-auto flex max-w-[900px] gap-8">
-              <DisplayMsg className="translate-y-8 opacity-0 max-sm:text-3xl">
+            <div className="intro col mx-auto flex max-w-[1000px] gap-8">
+              <DisplayMsg className="text-text translate-y-8 leading-[1.2] opacity-0 max-sm:text-3xl">
                 After wearing the fullstack hat for 3 years now,
               </DisplayMsg>
-              <DisplayMsg className="translate-y-8 opacity-0 max-sm:text-3xl">
+              <DisplayMsg className="text-text translate-y-8 leading-[1.2] opacity-0 max-sm:text-3xl">
                 I&apos;ve decided to focus on the part that brings me the
                 greatest joy.
               </DisplayMsg>
-              <DisplayMsg className="text-primary translate-y-8 opacity-0 max-sm:text-3xl">
+              <DisplayMsg className="translate-y-8 leading-[1.2] opacity-0 max-sm:text-3xl">
                 The frontend development.
               </DisplayMsg>
             </div>
@@ -94,26 +95,7 @@ function Intro() {
           >
             <div className="flex items-center gap-4">
               <h2 className="">Coming Soon</h2>
-              <a
-                href="#"
-                target="_blank"
-                className="flex-center hover:bg-primary group border-primary text-primary outline- outline-bg mt-2 gap-2 rounded-full border-2 px-3 py-1 text-base ring-blue-500 transition-colors hover:text-white focus-visible:ring-6 focus-visible:outline-2"
-              >
-                Link
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={4}
-                  className="stroke-primary size-4 transition-colors group-hover:stroke-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-                  />
-                </svg>
-              </a>
+              <LinkButton href="#" className="mt-2" />
             </div>
           </DisplayMsg>
           <div className="dashboard flex-center relative translate-y-[80vh] scale-75">
@@ -121,11 +103,11 @@ function Intro() {
               <div className="relative aspect-video w-full">
                 <Image
                   fill
-                  src="/images/macbook-mockup.jpg"
-                  alt="Macbook mockup"
+                  src="/images/device-mockups/ntb.png"
+                  alt="Notebook mockup"
                   className="object-contain"
                 />
-                <div className="absolute top-[2.9%] right-[12.3%] left-[12.3%] aspect-[16/10.41] overflow-hidden rounded-t-xl">
+                <div className="absolute top-[2.5%] right-[13.1%] left-[13.1%] aspect-[16/10.41] overflow-hidden sm:rounded-t-xl">
                   <Image
                     alt="dashboard"
                     className="h-full object-contain"

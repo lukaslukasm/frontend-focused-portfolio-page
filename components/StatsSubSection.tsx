@@ -37,7 +37,7 @@ function StatsSubSection() {
   return (
     <div
       ref={statsSubsectionRef}
-      className="statsSubsection max-lg:flex-center mt-24 grid-cols-2 flex-col gap-12 sm:mt-48 lg:grid lg:gap-32"
+      className="statsSubsection max-lg:flex-center mt-24 grid-cols-2 flex-col gap-12 sm:mt-48 lg:grid"
     >
       <DisplayMsg
         className="z-50 flex translate-y-8 opacity-0 max-lg:w-full lg:col-span-2"
@@ -51,20 +51,24 @@ function StatsSubSection() {
       </div>
       <div className="translate-y-8 opacity-0 lg:mt-10">
         <Tooltip id="my-tooltip" />
-        <p className="text-text text-xl font-bold sm:text-3xl">
+        <p className="text-text leading-[1.2] font-bold tracking-wide sm:text-3xl">
           Rather than labelling my skills with vague terms like
-          &apos;intermediate&apos; or &apos;advanced&apos;, here is the number
-          of{' '}
-          <span
-            data-tooltip-id="my-tooltip"
-            data-tooltip-content="A small project, contribution, or research that produced a usable result."
-            className='relative mr-2 after:absolute after:top-0 after:text-base after:text-orange-500 after:content-["?"]'
-          >
-            deliverables
+          &apos;intermediate&apos; or &apos;advanced&apos;, here is{' '}
+          <span className="text-highlight">
+            {' '}
+            the number of{' '}
+            <span
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content="A small project, contribution, or research that produced a usable result."
+              className='relative mr-2 after:absolute after:top-0 after:text-base after:text-orange-400 after:content-["?"]'
+            >
+              deliverables
+            </span>{' '}
+            I’ve shipped
           </span>{' '}
-          I’ve shipped using each technology over the past 3 years.
+          using each technology over the past 3 years.
         </p>
-        <p className="text-text mt-4 text-xl font-bold sm:mt-16 sm:text-3xl">
+        <p className="text-highlight mt-4 text-xl font-bold sm:mt-16 sm:text-3xl">
           Deliverables shipped to date:{' '}
           <span className="text-orange-400">53</span>
         </p>

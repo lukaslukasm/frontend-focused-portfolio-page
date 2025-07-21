@@ -84,7 +84,7 @@ function Experience() {
           .timeline({
             scrollTrigger: {
               trigger: experienceRef.current,
-              start: 'center bottom',
+              start: 'center-=200 bottom',
             },
           })
           .to('.heading', {
@@ -97,7 +97,7 @@ function Experience() {
             opacity: 1,
             y: 0,
             rotateX: 0,
-            delay: 3,
+            delay: 1,
             ease: 'power4.out',
           })
           .to(
@@ -151,21 +151,23 @@ function Experience() {
         <h2>Technologies</h2>
       </DisplayMsg>
       <div className="relative min-h-[90vh] sm:min-h-[70vh]">
-        <div className="col absolute-center z-10 flex w-11/12 sm:mt-24">
+        <div className="col absolute-center z-10 flex w-full">
           <DisplayMsg className="line1 translate-y-10 -rotate-x-45 opacity-0">
-            <h2 className="my-32 bg-radial from-cyan-50 from-50% to-transparent to-70% text-center text-5xl max-sm:text-3xl">
+            <p className="bg-linear-to-t from-transparent via-cyan-50 to-transparent py-32 text-center text-5xl leading-[1.2] font-bold max-sm:text-3xl">
               Over the past few years, I&apos;ve worked <br /> with a wide range
               of technologies
-            </h2>
+            </p>
           </DisplayMsg>
           <DisplayMsg className="line2 absolute translate-y-8 opacity-0 xl:top-1/4 xl:max-w-96">
-            <h2 className="bg-radial from-cyan-50 from-50% to-transparent to-70% text-5xl max-xl:my-32 max-xl:text-center max-sm:text-3xl xl:text-4xl">
-              Some of them truly stuck with me - and those are the ones I&apos;m
-              taking along.
-            </h2>
+            <p className="text-text bg-linear-to-t from-transparent via-cyan-50 to-transparent text-5xl leading-[1.2] max-xl:py-32 max-xl:text-center max-sm:text-3xl xl:text-4xl">
+              <span className="text-highlight">
+                Some of them truly stuck with me,
+              </span>{' '}
+              so those are the ones I&apos;m taking along.
+            </p>
           </DisplayMsg>
         </div>
-        <div className="wheels absolute-center col-span-2 row-span-2 w-[min(100%,60rem)] overflow-hidden sm:mt-24">
+        <div className="wheels absolute-center col-span-2 row-span-2 w-[min(100%,43rem)] overflow-hidden">
           <SmallWheelLogos />
           <BigWheelLogos />
         </div>

@@ -28,7 +28,7 @@ export default function DisplayMsg({
   return (
     <div
       className={cn(
-        'text-text',
+        'text-highlight',
         'font-bold',
         'relative',
         'flex',
