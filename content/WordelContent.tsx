@@ -1,7 +1,7 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import LinkButton from '../components/LinkButton';
-import GithubLink from '../components/GithubLink';
+// import GithubLink from '../components/GithubLink';
 import DisplayMsg from '@/components/DisplayMsg';
 import Image from 'next/image';
 
@@ -11,7 +11,7 @@ import Image from 'next/image';
  */
 function WordelContent() {
   return (
-    <div className="flex-center col grid-cols-2 gap-12 sm:grid">
+    <div className="flex-center col grid-cols-2 gap-12 sm:grid sm:items-start">
       {/* a11y */}
       <VisuallyHidden>
         <Dialog.Title>Wordel game</Dialog.Title>
@@ -37,7 +37,7 @@ function WordelContent() {
               className="ml-4"
               href="https://wordelgame.vercel.app/"
             />
-            <GithubLink href="https://wordelgame.vercel.app/" />
+            {/* <GithubLink href="https://wordelgame.vercel.app/" /> */}
           </div>
         </DisplayMsg>
       </div>
@@ -50,19 +50,28 @@ function WordelContent() {
         <h2>Features</h2>
         <ul>
           <li>
-            Truest me when I say that obtaining a collection of all 5 letter
-            words in slovak language was no fun
+            A huge hand-curated database of 5 letter words from slovak language
           </li>
-          <li>Top-notch responsivity</li>
           <li>Cool animations</li>
           <li>
-            DIY auth using JWT{' '}
-            <small>
-              {' '}
-              <i>(I wanted to learn the ways at the time)</i>
-            </small>
-          </li>
-          <li>Stats for logged users</li>
+            Top-notch responsivity. An unwanted scrollbar appeared on your
+            screen? You get your money back
+          </li>{' '}
+          <li>Coded and deployed before AI</li>
+          <li>User accounts:</li>
+          <ul>
+            {' '}
+            <li>
+              Utilises hand-made auth using JWT{' '}
+              <small>
+                {' '}
+                <i>(I&nbsp;wanted to learn the ways at the time)</i>
+              </small>
+            </li>
+            <li>Stats!</li>
+            <li>A random unique wordeľ-like account icon</li>
+            <li>Game language prefference stored in DB</li>
+          </ul>
         </ul>
         <h2>Techstack</h2>
         <ul>
