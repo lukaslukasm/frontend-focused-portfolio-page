@@ -10,6 +10,7 @@ import * as Dialog from '@radix-ui/react-dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import CarouselSlide from './CarouselSlide';
 import WordelContent from '@/content/WordelContent';
+import JewelryWizardContent from '@/content/JewelryWizardContent';
 /**
  * Section component for displaying the other selected work.
  *
@@ -117,16 +118,7 @@ function Projects() {
           </div>
         </ExpandableCarouselSlide>
         <ExpandableCarouselSlide
-          expandedContent={
-            <div className="col flex">
-              <VisuallyHidden>
-                <Dialog.Title>Klenotnicky Radca</Dialog.Title>
-                <Dialog.Description></Dialog.Description>
-              </VisuallyHidden>
-              <h1>this is the content of expanded carousel slide</h1>
-              <button>button</button>
-            </div>
-          }
+          expandedContent={<JewelryWizardContent />}
           btnClassName="bg-green-600 text-bg/80"
         >
           <div className="absolute top-0 bottom-0 left-0 -z-10 size-full overflow-hidden rounded-3xl">
@@ -155,6 +147,8 @@ function Projects() {
                 <Dialog.Title>Klenotnicky Radca</Dialog.Title>
                 <Dialog.Description></Dialog.Description>
               </VisuallyHidden>
+              <h1>this is the content of expanded carousel slide</h1>
+              <button>button</button>
             </div>
           }
           btnClassName="bg-green-600 text-bg/80"
