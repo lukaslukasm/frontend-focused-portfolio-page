@@ -18,12 +18,14 @@ function WordelContent() {
         <Dialog.Description>
           Features: cool animations, slovak language support, coded before AI,
           DIY login and user management (it was a long time ago, I wanted to
-          learn how it works.), logged in users can see their stats,uses JWT for
-          login, started as a 1:1 copy of{' '}
+          learn how it works.), logged in users can see their stats, uses JWT
+          for login,every user gets a custom generated wordel-like icon, started
+          as a 1:1 copy of{' '}
           <a href="https://www.nytimes.com/games/wordle/index.html">
             The worlde game
           </a>
-          Techstack: nextjs, typescript, react, framer-motion, styled components
+          Techstack: nextjs, typescript, react, framer-motion, styled
+          components, prisma
         </Dialog.Description>
       </VisuallyHidden>
       <div className="flex-center col-span-2 w-full justify-between">
