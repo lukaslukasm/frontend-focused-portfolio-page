@@ -17,18 +17,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   useGSAP(() => {
-    ScrollSmoother.create({
-      smooth: 1,
-    });
+    if (!window.matchMedia('(pointer: coarse)').matches)
+      ScrollSmoother.create({
+        smooth: 1,
+        ignoreMobileResize: true,
+        normalizeScroll: true,
+      });
   });
 
   return (
     <html className="no-scrollbar max-w-screen overflow-x-hidden" lang="en">
       <body className={`col flex w-full bg-cyan-50 ${font.className}`}>
         <Header />
-        <div id="smooth-content">
-          {children}
-          <Footer />
+        <div id="smooth-wrapper">
+          <div id="smooth-content">
+            {children}
+            <Footer />
+          </div>
         </div>
       </body>
     </html>
