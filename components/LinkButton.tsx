@@ -1,21 +1,30 @@
 import { cn } from '@/utils/cn';
+import Link from 'next/link';
+import { ReactNode } from 'react';
 
 type LinkButtonProps = {
   className?: string;
-  label?: string;
+  children?: ReactNode;
   href: string;
+  useNextLink?: boolean;
 };
 
 /**
  * Renders a link button with styling and a11y. The vector uses `currentColor`
  *
  * @param href - the link you want this button to point to.
+ * @param children - optional, changes the label only.
  * @param className - optional, allows change the styling of the button.
  *
  */
-function LinkButton({ className = '', label = 'Link', href }: LinkButtonProps) {
+function LinkButton({
+  className = '',
+  children = 'Link',
+  href,
+}: LinkButtonProps) {
   return (
-    <a
+    <Link
+      scroll={false}
       href={href}
       target="_blank"
       className={cn(
@@ -38,7 +47,7 @@ function LinkButton({ className = '', label = 'Link', href }: LinkButtonProps) {
       )}
       rel="noreferrer"
     >
-      {label}
+      {children}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -53,7 +62,7 @@ function LinkButton({ className = '', label = 'Link', href }: LinkButtonProps) {
           d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
         />
       </svg>
-    </a>
+    </Link>
   );
 }
 export default LinkButton;

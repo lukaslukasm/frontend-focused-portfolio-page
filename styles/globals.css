@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
+@source "../node_modules/reservation-system/";
 
 @theme {
   --breakpoint-xs: 27rem;

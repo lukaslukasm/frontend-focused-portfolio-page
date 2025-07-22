@@ -11,6 +11,7 @@ import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import CarouselSlide from './CarouselSlide';
 import WordelContent from '@/content/WordelContent';
 import JewelryWizardContent from '@/content/JewelryWizardContent';
+import ReservationSystemContent from '@/content/ReservationSystemContent';
 /**
  * Section component for displaying the other selected work.
  *
@@ -55,16 +56,7 @@ function Projects() {
       </DisplayMsg>
       <Carousel className="[&_.carousel-arrows-nav]:translate-y-8 [&_.carousel-arrows-nav]:opacity-0 [&_.carousel-slide]:translate-y-8 [&_.carousel-slide]:opacity-0">
         <ExpandableCarouselSlide
-          expandedContent={
-            <div className="col flex">
-              <VisuallyHidden>
-                <Dialog.Title>Hello world</Dialog.Title>
-                <Dialog.Description>Hello world</Dialog.Description>
-              </VisuallyHidden>
-              <h1>this is the content of expanded carousel slide</h1>
-              <button>button</button>
-            </div>
-          }
+          expandedContent={<ReservationSystemContent />}
           btnClassName="bg-green-600 text-bg/80"
         >
           <div className="absolute inset-0 -right-10 -z-10 size-full overflow-hidden rounded-3xl">
