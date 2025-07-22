@@ -1,9 +1,12 @@
+'use client';
 import { cn } from '@/utils/cn';
 import { useEffect, useRef, useState } from 'react';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Squeeze as Hamburger } from 'hamburger-react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 /**
  * Header component that renders desktop and mobile navigation.
@@ -18,6 +21,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const openMenuAnimation = useRef<gsap.core.Timeline | null>(null);
   const mobileNavFirstLink = useRef<HTMLAnchorElement>(null);
+  const router = useRouter();
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollToPlugin);
@@ -102,6 +106,16 @@ function Header() {
           <li className="flex-grow" aria-hidden></li>
           <li>
             <button
+              onClick={() => {
+                setMenuOpen(false);
+                router.push('/');
+              }}
+            >
+              Home
+            </button>
+          </li>
+          <li>
+            <button
               type="button"
               aria-label="Scroll to about section"
               onClick={() =>
@@ -148,6 +162,16 @@ function Header() {
           className="mobile-nav-wrapper fixed inset-0 z-40 h-dvh -translate-y-full bg-gray-100 opacity-50"
         >
           <ul className="col mt-20 ml-8 flex gap-4">
+            <li>
+              <button
+                onClick={() => {
+                  setMenuOpen(false);
+                  router.push('/');
+                }}
+              >
+                Home
+              </button>
+            </li>
             <li>
               <button
                 type="button"
