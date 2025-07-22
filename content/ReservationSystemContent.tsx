@@ -3,6 +3,7 @@ import LinkButton from '@/components/LinkButton';
 import * as Dialog from '@radix-ui/react-dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function ReservationSystemContent() {
   return (
@@ -11,7 +12,7 @@ function ReservationSystemContent() {
         <Dialog.Title>Reservation System</Dialog.Title>
         <Dialog.Description>
           Features component lib by another team, supports skeletom loading,
-          memoisation-leveraging calendar, it is aa npm package, thus the design
+          memoisation-leveraging calendar, it is an npm package, thus the design
           contains some rough edges. The highlight is that the techstack is
           mine, it was designed based on the needs at the start of the project
           with a single target: a frictionless development. I am prod to say
@@ -26,7 +27,16 @@ function ReservationSystemContent() {
         >
           <div className="flex items-center gap-3">
             <h1 className="text-highlight text-left">Reservation System</h1>
-            <LinkButton className="ml-4" href="https://radca.amawell.sk/" />
+            <span>
+              <Link
+                href="/reservation-system-demo"
+                className="rounded-full border p-2 px-4 text-sm"
+              >
+                {' '}
+                link je tu
+              </Link>
+            </span>
+            {/* <LinkButton className="ml-4" href="" /> */}
             {/* <GithubLink href="https://wordelgame.vercel.app/" /> */}
           </div>
         </DisplayMsg>
@@ -42,9 +52,12 @@ function ReservationSystemContent() {
         <ul>
           <li>Skeleton loading</li>
           <li>Leverages Memoization</li>
-          <li>User&apos; Bussiness&apos; information autofill</li>
-          <li>Well-picked techstack provided frictionless development</li>
+          <li>Business information autofill</li>
+          <li>Well-picked techstack, frictionless development</li>
           <li>Scheduled meetings management</li>
+          <li>
+            Per-field validation with verbose and localised error messages
+          </li>
           <li>
             Complies with{' '}
             <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.w3.org/WAI/WCAG2AA-Conformance&ved=2ahUKEwjMtIqj486OAxUgRvEDHcyjFXEQFnoECAoQAQ&usg=AOvVaw02ovFfwuRaYkCa-OXIqsaN">
