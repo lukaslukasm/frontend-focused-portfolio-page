@@ -4,6 +4,10 @@ import * as Dialog from '@radix-ui/react-dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import Image from 'next/image';
 
+/**
+ * Renders a static content about the project Jewerly Wizard. Includes data, styling and pictures.
+ *
+ */
 function JewelryWizardContent() {
   return (
     <div className="flex-center col grid-cols-2 gap-12 sm:grid sm:items-start">
