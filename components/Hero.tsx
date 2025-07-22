@@ -40,7 +40,7 @@ function Hero() {
   );
 
   return (
-    <section ref={heroRef} className="flex-center col relative h-dvh">
+    <section ref={heroRef} className="flex-center col relative h-svh">
       <div className="col flex text-center">
         <div className="name invisible mb-0 font-bold tracking-tight sm:mb-4 sm:text-xl">
           Hello, I&apos;m Lukas.
