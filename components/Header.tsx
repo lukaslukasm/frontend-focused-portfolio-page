@@ -5,7 +5,6 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Squeeze as Hamburger } from 'hamburger-react';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 /**
