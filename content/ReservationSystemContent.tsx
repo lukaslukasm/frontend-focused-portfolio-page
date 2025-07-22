@@ -3,8 +3,11 @@ import LinkButton from '@/components/LinkButton';
 import * as Dialog from '@radix-ui/react-dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import Image from 'next/image';
-import Link from 'next/link';
 
+/**
+ * Renders a static content about the project Reservation System. Includes data, styling and pictures.
+ *
+ */
 function ReservationSystemContent() {
   return (
     <div className="flex-center col grid-cols-2 gap-12 sm:grid sm:items-start">
@@ -27,21 +30,26 @@ function ReservationSystemContent() {
         >
           <div className="flex items-center gap-3">
             <h1 className="text-highlight text-left">Reservation System</h1>
-            <span>
-              <Link
-                href="/reservation-system-demo"
-                className="rounded-full border p-2 px-4 text-sm"
-              >
-                {' '}
-                link je tu
-              </Link>
-            </span>
+
             {/* <LinkButton className="ml-4" href="" /> */}
             {/* <GithubLink href="https://wordelgame.vercel.app/" /> */}
           </div>
         </DisplayMsg>
       </div>
       <div className="prose-cyan prose-headings:text-highlight prose-li:text-text prose-p:text-text prose">
+        <div className="prune rounded-md border-l-4 border-yellow-500 bg-yellow-100 p-4 text-sm text-yellow-800">
+          ⚠️ <strong>Note:</strong> This demo contains the user-facing interface
+          only. Since the data is faked, it does not behave properly upon
+          change.
+        </div>
+        <div className="mt-4">
+          <LinkButton
+            href="/reservation-system-demo"
+            className="mx-auto w-max rounded-full border p-2 px-4 text-sm no-underline"
+          >
+            Demo
+          </LinkButton>
+        </div>
         <h2>Description</h2>
         <p>
           A specific reservation system which allows to pick a meeting date
@@ -82,7 +90,7 @@ function ReservationSystemContent() {
       </div>
       <div className="isolate">
         <Image
-          src="/images/jewelry-wizard-preview.png"
+          src="/images/reservation-system-preview.png"
           alt="Wordel Preview"
           width="400"
           height="1000"
