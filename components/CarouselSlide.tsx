@@ -41,7 +41,6 @@ function CarouselSlide({
       aria-label="slide"
       className={cn(
         'carousel-slide',
-        'aspect-[3/5]',
         'relative',
         'sm:w-88',
         'w-64',
@@ -53,7 +52,7 @@ function CarouselSlide({
         'gap-3',
         'snap-start',
         'select-none',
-        'overflow-hidden',
+        'overflow-visible',
         'rounded-3xl',
         'bg-white',
         'drop-shadow-lg',
@@ -61,7 +60,7 @@ function CarouselSlide({
         className,
       )}
     >
-      {children}
+      <div className="aspect-[3/5] overflow-hidden">{children}</div>
     </li>
   );
 }
