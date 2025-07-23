@@ -40,16 +40,16 @@ function StatsSubSection() {
       className="statsSubsection max-lg:flex-center mt-24 grid-cols-2 flex-col gap-12 sm:mt-48 lg:grid"
     >
       <DisplayMsg
-        className="z-50 flex translate-y-8 opacity-0 max-lg:w-full lg:col-span-2"
+        className="z-50 flex translate-y-8 opacity-0 max-lg:w-full max-sm:px-[var(--responsive-gutter-width)] lg:col-span-2"
         categoryClassName="text-orange-400"
         category="Experience"
       >
         <h2>In numbers</h2>
       </DisplayMsg>
-      <div className="w-screen translate-y-8 opacity-0 max-lg:order-1 max-lg:mt-12 sm:w-full">
+      <div className="relative w-screen translate-y-8 opacity-0 max-lg:order-1 max-lg:mt-12 sm:w-full">
         <StatsBubblesView />
       </div>
-      <div className="translate-y-8 opacity-0 lg:mt-10">
+      <div className="translate-y-8 opacity-0 max-sm:px-[var(--responsive-gutter-width)] lg:mt-10">
         <Tooltip id="my-tooltip" />
         <p className="text-text leading-[1.2] font-bold tracking-wide sm:text-3xl">
           Rather than labelling my skills with vague terms like
@@ -60,7 +60,7 @@ function StatsSubSection() {
             <span
               data-tooltip-id="my-tooltip"
               data-tooltip-content="A small project, contribution, or research that produced a usable result."
-              className='relative mr-2 after:absolute after:top-0 after:text-base after:text-orange-400 after:content-["?"]'
+              className='relative mr-2 after:absolute after:top-0 after:text-xs after:text-orange-400 after:content-["?"] after:lg:text-base'
             >
               deliverables
             </span>{' '}
