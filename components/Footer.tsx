@@ -98,10 +98,10 @@ function Footer() {
       className="flex-center col text-highlight bg-bg relative h-[75svh] w-screen px-4 pb-40 sm:h-[50svh]"
     >
       <DisplayMsg
-        className="heading-footer translate-y-8 text-center leading-[1.2] opacity-0 max-sm:text-6xl"
+        className="heading-footer translate-y-8 text-center leading-[1.1] opacity-0 max-sm:text-6xl"
         category="And that's a wrap!"
       >
-        Thanks for scrolling&nbsp;by.
+        <span className="tracking-tight">Thanks for scrolling&nbsp;by.</span>
       </DisplayMsg>
       <p className="text-text mt-24 translate-y-8 text-center leading-[1.2] font-bold opacity-0 sm:mt-12 sm:text-xl">
         Got some divs that need centering? <br className="sm:hidden" /> Feel

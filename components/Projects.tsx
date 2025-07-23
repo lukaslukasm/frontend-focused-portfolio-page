@@ -1,3 +1,4 @@
+'use client';
 import '@splidejs/react-splide/css';
 import DisplayMsg from './DisplayMsg';
 import Carousel from './Carousel';
@@ -162,7 +163,10 @@ function Projects() {
           <button
             className="col flex size-full cursor-pointer text-left"
             onClick={() => {
-              gsap.to(window, { duration: 1, scrollTo: '#showcase' });
+              gsap.to(window, {
+                duration: 1,
+                scrollTo: { y: '#showcase', offsetY: 90 },
+              });
             }}
           >
             <DisplayMsg

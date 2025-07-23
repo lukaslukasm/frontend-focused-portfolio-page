@@ -1,11 +1,10 @@
-'use client';
-import ReservationSystem from 'reservation-system';
+import ReservationSystemDemo from '@/components/ReservationSystemDemo';
+import type { Metadata } from 'next';
 
-function ReservationSystemDemo() {
-  return (
-    <div className="mt-20">
-      <ReservationSystem demo apiUrl="" />
-    </div>
-  );
+export const metadata: Metadata = {
+  title: 'Reservation System Demo — Lukas M',
+};
+function Page() {
+  return <ReservationSystemDemo />;
 }
-export default ReservationSystemDemo;
+export default Page;

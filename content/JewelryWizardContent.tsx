@@ -68,14 +68,16 @@ function JewelryWizardContent() {
           <li>TailwindCSS</li>
         </ul>
       </div>
-      <div className="isolate">
-        <Image
-          src="/images/jewelry-wizard-preview.png"
-          alt="Wordel Preview"
-          width="400"
-          height="1000"
-          className="mx-auto drop-shadow-2xl max-sm:w-1/2"
-        />
+      <div className="flex-center isolate w-full overflow-visible">
+        <div className="size-max drop-shadow-2xl max-sm:w-3/5">
+          <Image
+            src="/images/jewelry-wizard-preview.png"
+            alt="Jewelry Wizard Preview"
+            width="400"
+            height="1000"
+            priority
+          />
+        </div>
       </div>
     </div>
   );
