@@ -149,7 +149,7 @@ function Experience() {
       <div className="relative min-h-[95svh] w-full sm:min-h-[70vh]">
         <div className="col sm:absolute-center z-10 flex w-full max-sm:absolute max-sm:bottom-0">
           <DisplayMsg className="line1 translate-y-10 -rotate-x-45 opacity-0">
-            <p className="bg-linear-to-t from-transparent via-cyan-50 to-transparent text-5xl leading-[1.2] font-bold max-sm:px-[var(--responsive-gutter-width)] max-sm:text-3xl sm:py-32">
+            <p className="bg-linear-to-t from-transparent via-cyan-50 to-transparent text-5xl leading-[1.2] font-bold max-sm:px-[var(--responsive-gutter-width)] max-sm:text-3xl sm:py-32 xl:text-center">
               Over the past few years, I&apos;ve worked <br /> with a wide range
               of technologies
             </p>
