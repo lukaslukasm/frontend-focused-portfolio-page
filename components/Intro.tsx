@@ -72,14 +72,14 @@ function Intro() {
         <div className="h-[360svh] lg:h-[260svh]">
           <div className="intro-pin">
             <div className="intro col mx-auto flex max-w-[1000px] gap-8">
-              <DisplayMsg className="text-text translate-y-8 leading-[1.2] opacity-0 max-sm:text-3xl">
+              <DisplayMsg className="translate-y-8 leading-[1.2] opacity-0 max-sm:text-3xl">
                 After wearing the fullstack hat for 3 years now,
               </DisplayMsg>
-              <DisplayMsg className="text-text translate-y-8 leading-[1.2] opacity-0 max-sm:text-3xl">
+              <DisplayMsg className="translate-y-8 leading-[1.2] opacity-0 max-sm:text-3xl">
                 I&apos;ve decided to focus on the part that brings me the
                 greatest joy.
               </DisplayMsg>
-              <DisplayMsg className="translate-y-8 leading-[1.2] opacity-0 max-sm:text-3xl">
+              <DisplayMsg className="text-primary eading-[1.2] translate-y-8 font-black opacity-0 max-sm:text-3xl">
                 The frontend development.
               </DisplayMsg>
             </div>
