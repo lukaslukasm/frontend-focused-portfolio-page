@@ -20,8 +20,8 @@ export default function RootLayout({
     if (!window.matchMedia('(pointer: coarse)').matches)
       ScrollSmoother.create({
         smooth: 1,
-        ignoreMobileResize: true,
-        normalizeScroll: true,
+        // ignoreMobileResize: true,
+        // normalizeScroll: true,
       });
   });
 
