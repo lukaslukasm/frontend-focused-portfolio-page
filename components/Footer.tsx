@@ -4,6 +4,11 @@ import DisplayMsg from './DisplayMsg';
 import gsap from 'gsap';
 import { useRef } from 'react';
 
+/**
+ * Footer component for displaying the website's contact section and story wrap.
+ *
+ * Renders static content with layout, styling, and animations.
+ */
 function Footer() {
   const footerRef = useRef<HTMLDivElement>(null);
   const tl = useRef<GSAPTimeline>(null);
@@ -90,23 +95,23 @@ function Footer() {
     <div
       id="contact"
       ref={footerRef}
-      className="flex-center col text-text bg-bg relative h-[75svh] w-screen px-4 pb-40 sm:h-[50svh]"
+      className="flex-center col text-highlight bg-bg relative h-[75svh] w-screen px-4 pb-40 sm:h-[50svh]"
     >
       <DisplayMsg
-        className="heading-footer translate-y-8 text-center opacity-0 max-sm:text-6xl"
+        className="heading-footer translate-y-8 text-center leading-[1.1] opacity-0 max-sm:text-6xl"
         category="And that's a wrap!"
       >
-        Thanks for scrolling&nbsp;by.
+        <span className="tracking-tight">Thanks for scrolling&nbsp;by.</span>
       </DisplayMsg>
-      <p className="mt-24 translate-y-8 text-center text-base opacity-0 sm:mt-12 sm:text-xl">
+      <p className="text-text mt-24 translate-y-8 text-center leading-[1.2] font-bold opacity-0 sm:mt-12 sm:text-xl">
         Got some divs that need centering? <br className="sm:hidden" /> Feel
         free to reach out.
       </p>
-      <div className="flex-center mt-3 translate-y-8 gap-4 rounded-full bg-gray-200 p-1 opacity-0">
+      <div className="flex-center mt-4 translate-y-8 gap-4 rounded-full bg-gray-200 p-1 opacity-0">
         <address className="not-italic">
           <a
             href="mailto:mikula.luky@gmail.com"
-            className="my-1.5 ml-4 text-xl font-bold underline"
+            className="my-1.5 ml-4 text-xl leading-0 font-bold underline"
           >
             mikula.luky@gmail.com
           </a>
@@ -118,7 +123,7 @@ function Footer() {
             navigator.clipboard.writeText('mikula.luky@gmail.com');
             toggleTimeline();
           }}
-          className="bg-text relative isolate cursor-pointer overflow-hidden rounded-full !opacity-100 hover:[&_.blue-bg]:opacity-100"
+          className="bg-highlight relative isolate cursor-pointer overflow-hidden rounded-full !opacity-100 hover:[&_.blue-bg]:opacity-100"
         >
           <div className="blue-bg bg-primary absolute inset-0 opacity-0 transition-opacity"></div>
           <div className="gradient-border from-primary to-primary absolute top-1/2 left-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 bg-conic-180 from-0% via-transparent blur-md"></div>

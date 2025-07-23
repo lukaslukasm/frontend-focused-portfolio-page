@@ -1,9 +1,11 @@
+'use client';
 import { cn } from '@/utils/cn';
 import { useEffect, useRef, useState } from 'react';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Squeeze as Hamburger } from 'hamburger-react';
+import { useRouter } from 'next/navigation';
 
 /**
  * Header component that renders desktop and mobile navigation.
@@ -18,6 +20,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const openMenuAnimation = useRef<gsap.core.Timeline | null>(null);
   const mobileNavFirstLink = useRef<HTMLAnchorElement>(null);
+  const router = useRouter();
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollToPlugin);
@@ -96,10 +99,20 @@ function Header() {
         {/* desktop navbar */}
         <ul className="flex w-full gap-8 max-sm:hidden [&_li]:flex [&_li]:items-center">
           {/* logo */}
-          <li className="from-text bg-gradient-to-r to-cyan-500 bg-clip-text text-transparent">
+          <li className="from-highlight bg-gradient-to-r to-cyan-500 bg-clip-text text-transparent">
             Available starting October
           </li>
           <li className="flex-grow" aria-hidden></li>
+          <li>
+            <button
+              onClick={() => {
+                setMenuOpen(false);
+                router.push('/');
+              }}
+            >
+              Home
+            </button>
+          </li>
           <li>
             <button
               type="button"
@@ -129,7 +142,7 @@ function Header() {
               onClick={() =>
                 gsap.to(window, { duration: 1, scrollTo: '#contact' })
               }
-              className="bg-text relative isolate overflow-hidden rounded-full !opacity-100 hover:[&_.blue-bg]:opacity-100"
+              className="bg-highlight relative isolate overflow-hidden rounded-full !opacity-100 hover:[&_.blue-bg]:opacity-100"
             >
               <div className="blue-bg bg-primary absolute inset-0 opacity-0 transition-opacity"></div>
               <div className="gradient-border from-primary to-primary absolute top-1/2 left-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 bg-conic-180 from-0% via-transparent blur-md"></div>
@@ -148,6 +161,16 @@ function Header() {
           className="mobile-nav-wrapper fixed inset-0 z-40 h-dvh -translate-y-full bg-gray-100 opacity-50"
         >
           <ul className="col mt-20 ml-8 flex gap-4">
+            <li>
+              <button
+                onClick={() => {
+                  setMenuOpen(false);
+                  router.push('/');
+                }}
+              >
+                Home
+              </button>
+            </li>
             <li>
               <button
                 type="button"
@@ -187,7 +210,7 @@ function Header() {
           </ul>
         </div>
         <div className="flex-center w-full gap-2 sm:hidden">
-          <span className="from-text bg-gradient-to-r to-cyan-500 bg-clip-text text-transparent max-sm:text-sm">
+          <span className="from-highlight bg-gradient-to-r to-cyan-500 bg-clip-text text-transparent max-sm:text-sm">
             Available starting October
           </span>
           <div className="flex-grow"></div>
@@ -213,7 +236,7 @@ function Header() {
             <button
               type="button"
               aria-label="Scroll to contact section"
-              className="text-text mb-1.5 text-sm leading-none font-bold !opacity-90"
+              className="text-highlight mb-1.5 text-sm leading-none font-bold !opacity-90"
               onClick={() =>
                 gsap.to(window, { duration: 1, scrollTo: '#contact' })
               }

@@ -18,29 +18,29 @@ import 'react-tooltip/dist/react-tooltip.css';
 function SmallWheelLogos() {
   return (
     <div className="">
-      <LogosWheel radiusWidthMobile={70} className="" radiusWidthDesktop={180}>
-        <div className="card fav size-8 sm:size-18">
+      <LogosWheel radiusWidthMobile={70} className="" radiusWidthDesktop={120}>
+        <div className="card fav size-8 sm:size-14">
           <Image src={reactLogo} alt="React logo" />
         </div>
-        <div className="card size-8 sm:size-18">
+        <div className="card size-8 sm:size-14">
           <Image src={silverstripe} alt="Silverstripe logo" />
         </div>
-        <div className="card fav size-8 sm:size-18">
+        <div className="card fav size-8 sm:size-14">
           <Image src={strapi} alt="Strapi logo" />
         </div>
-        <div className="card size-8 sm:size-18">
+        <div className="card size-8 sm:size-14">
           <Image src={shoptet} alt="Shoptet logo" />
         </div>
-        <div className="card fav size-8 sm:size-18">
+        <div className="card fav size-8 sm:size-14">
           <Image src={tw} alt="Tailwind logo" />
         </div>
-        <div className="card size-8 sm:size-18">
+        <div className="card size-8 sm:size-14">
           <Image src={laravel} alt="Laravel logo" />
         </div>
-        <div className="card fav size-8 sm:size-18">
+        <div className="card fav size-8 sm:size-14">
           <Image src={node} alt="Node.js logo" />
         </div>
-        <div className="card size-8 sm:size-18">
+        <div className="card size-8 sm:size-14">
           <Image src={sas360} alt="SAS360 logo" />
         </div>
       </LogosWheel>

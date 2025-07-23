@@ -21,12 +21,14 @@
     "react-bubble-ui": "^1.1.2",
     "react-dom": "^19.0.0",
     "react-tooltip": "^5.29.1",
+    "reservation-system": "file:reservation-system-1.0.1.tgz",
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@eslint/js": "^9.27.0",
     "@tailwindcss/postcss": "^4",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

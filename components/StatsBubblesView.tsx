@@ -53,6 +53,9 @@ export default function StatsBubblesView() {
       >
         {bubbles}
       </BubbleUI>
+      <div className="text-text absolute right-0 -bottom-10 left-0 bg-transparent text-center text-xs font-normal italic lg:bottom-10">
+        Scroll around to discover
+      </div>
     </div>
   );
 }

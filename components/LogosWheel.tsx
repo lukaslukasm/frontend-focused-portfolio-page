@@ -72,7 +72,7 @@ function LogosWheel({
             trigger: mainWrapRef.current,
             start: 'top center',
           },
-          delay: 2,
+          delay: 0.5,
         })
         .set(cardList, {
           opacity: 0,

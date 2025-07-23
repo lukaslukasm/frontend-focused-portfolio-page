@@ -12,7 +12,7 @@ type CarouselProps = {
 /**
  * A horizontal scrollable carousel component with drag and  scroll support and arrow navigation.
  *
- * Expects children to be one or more `<CarouselSlide />` components.
+ * Expects children to be one or more `<CarouselSlide />` or `<ExpandableCarouselSlide />` components.
  * Handles mouse dragging, arrow button scrolling, and disables arrows
  * when scrolling reaches either end.
  *
@@ -20,7 +20,7 @@ type CarouselProps = {
  * ```tsx
  * <Carousel>
  *   <CarouselSlide>...</CarouselSlide>
- *   <CarouselSlide>...</CarouselSlide>
+ *   <ExpandableCarouselSlide expandedContent={...}>...</ExpandableCarouselSlide>
  * </Carousel>
  * ```
  *
@@ -147,7 +147,7 @@ function Carousel({ children, className = '' }: CarouselProps) {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 -960 960 960"
-            className="fill-text mr-px -ml-px size-7 scale-110"
+            className="fill-highlight mr-px -ml-px size-7 scale-110"
           >
             <path d="m471-480 137 137q20 19 20 46.98 0 27.98-20 48.02-19 19-46.98 19-27.98 0-48.02-19L330-432q-9.91-9.71-15.45-22.21Q309-466.71 309-480q0-13.57 5.55-26.32Q320.09-519.07 330-529l183-184q20.04-19 48.02-19Q589-732 608-713q20 20.04 20 48.02Q628-637 608-618L471-480Z" />
           </svg>
@@ -163,7 +163,7 @@ function Carousel({ children, className = '' }: CarouselProps) {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 -960 960 960"
-            className="fill-text -mr-px ml-px size-7 scale-110 rotate-z-180"
+            className="fill-highlight -mr-px ml-px size-7 scale-110 rotate-z-180"
           >
             <path d="m471-480 137 137q20 19 20 46.98 0 27.98-20 48.02-19 19-46.98 19-27.98 0-48.02-19L330-432q-9.91-9.71-15.45-22.21Q309-466.71 309-480q0-13.57 5.55-26.32Q320.09-519.07 330-529l183-184q20.04-19 48.02-19Q589-732 608-713q20 20.04 20 48.02Q628-637 608-618L471-480Z" />
           </svg>
