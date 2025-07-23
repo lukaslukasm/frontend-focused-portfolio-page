@@ -35,10 +35,7 @@ function WordelContent() {
         >
           <div className="flex items-center gap-3">
             <h1 className="text-highlight text-left">Wordeľ</h1>
-            <LinkButton
-              className="ml-4"
-              href="https://wordelgame.vercel.app/"
-            />
+            <LinkButton className="ml-4" href="https://wordel.lukasm.dev/" />
             {/* <GithubLink href="https://wordelgame.vercel.app/" /> */}
           </div>
         </DisplayMsg>
