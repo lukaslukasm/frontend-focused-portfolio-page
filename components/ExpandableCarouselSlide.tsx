@@ -113,7 +113,7 @@ const ExpandableCarouselSlide = ({
               open && 'animate-opacityy',
             )}
           >
-            <Dialog.Content className="focus-visible:custom-focus-visible bg-bg col mx-4 my-4 flex h-max w-full max-w-[60rem] rounded-xl p-4 pt-4 sm:my-12 sm:rounded-3xl sm:p-12 sm:pt-6 lg:p-18">
+            <Dialog.Content className="focus-visible:custom-focus-visible bg-bg col mx-4 my-4 flex h-max w-full max-w-[60rem] rounded-xl p-4 pt-4 max-sm:pb-20 sm:my-12 sm:rounded-3xl sm:p-12 sm:pt-6 lg:p-18">
               <Dialog.Close className="bg-highlight text-bg/70 hover:text-bg focus-visible:custom-focus-visible sticky top-4 z-50 cursor-pointer self-end rounded-full p-1.5 transition-colors sm:top-6 sm:-mr-6 lg:top-6 lg:-mt-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
