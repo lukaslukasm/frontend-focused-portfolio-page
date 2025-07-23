@@ -1,17 +1,5 @@
 [
   {
-    "label": "Scroll to discover",
-    "className": [
-      "font-normal",
-      "bg-orange-500/20",
-      "flex-col-reverse",
-      "[&_img]:opacity-80",
-      "[&_img]:mt-2",
-      "[&_div:has(img)]:!size-8"
-    ],
-    "logo": "/images/arrow-down.svg"
-  },
-  {
     "label": "Tailwind",
     "value": 28,
     "className": ["bg-sky-400/20", "[&_img]:opacity-80"],
