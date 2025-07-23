@@ -1,3 +1,4 @@
+'use client';
 import '@splidejs/react-splide/css';
 import DisplayMsg from './DisplayMsg';
 import Carousel from './Carousel';

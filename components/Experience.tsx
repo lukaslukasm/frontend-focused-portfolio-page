@@ -1,3 +1,4 @@
+'use client';
 import { useRef } from 'react';
 import DisplayMsg from './DisplayMsg';
 import { useGSAP } from '@gsap/react';
