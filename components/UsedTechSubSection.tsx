@@ -54,7 +54,7 @@ function UsedTechSubSection() {
         .fromTo(
           document.body,
           { objectFit: 'contain' },
-          { objectFit: 'contain', duration: 5 },
+          { objectFit: 'contain', duration: 2 },
         );
     },
     { scope: usedTechRef },
