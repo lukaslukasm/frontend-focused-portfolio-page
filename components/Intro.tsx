@@ -21,7 +21,7 @@ function Intro() {
         .timeline({
           scrollTrigger: {
             trigger: '.intro',
-            start: 'top top+=200',
+            start: window.innerWidth > 640 ? 'top top+=200' : 'top top+=100',
             end: '+=2000',
             scrub: 1,
             pin: true,
