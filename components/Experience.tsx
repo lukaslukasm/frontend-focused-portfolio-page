@@ -20,83 +20,83 @@ function Experience() {
     () => {
       const mm = gsap.matchMedia();
 
+      // pin the heading
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: '.experience > .heading-pin',
+          pin: true,
+          start: 'bottom top+=100',
+          end: '+=2000',
+        },
+      });
+
+      // animate the heading
       gsap
         .timeline({
           scrollTrigger: {
-            trigger: '.experience > .heading',
-            pin: true,
-            start: 'bottom top+=200',
-            end: '+=2000',
+            trigger: experienceRef.current,
+            start: 'top bottom-=200',
+            toggleActions: 'play none none reset',
           },
         })
-        .to('.heading', {
+        .to('.experience .heading', {
           y: 0,
           duration: 0.75,
           opacity: 1,
           stagger: 0.2,
         });
 
-      mm.add('(max-width:640px)', () => {
-        gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: experienceRef.current,
-              start: 'top center',
-            },
-          })
-          .to('.heading', {
-            y: 0,
-            duration: 0.75,
-            opacity: 1,
-            stagger: 0.2,
-          })
-          .to('.line1', {
-            opacity: 1,
-            y: 0,
-            rotateX: 0,
-            delay: 3,
-            ease: 'power4.out',
-          })
-          .to(
-            '.line1',
-            { opacity: 0, y: -36, ease: 'power4.out', rotateX: -80 },
-            '>+=3',
-          )
-          .to(
-            '.line2',
-            {
-              opacity: 1,
-              y: 0,
-              rotateX: 0,
-              ease: 'power4.out',
-            },
-            '<',
-          )
-          // .to('.wheels', { top: '30vh', y: 0 }, '<')
-          .fromTo(
-            '.card',
-            { opacity: 0.5 },
-            {
-              opacity: 0.05,
-              filter: 'grayscale(100)',
-            },
-          )
-          .to(
-            '.fav',
-            {
-              opacity: 1,
-              filter: 'grayscale(0)',
-            },
-            '<',
-          );
-      });
+      // MOBILE
+      // mm.add('(max-width:640px)', () => {
+      //   gsap
+      //     .timeline({
+      //       scrollTrigger: {
+      //         trigger: '.first-subsection',
+      //         start: 'top top+=100',
+      //         pin: true,
+      //         scrub: 1,
+      //         end: '+=2000',
+      //       },
+      //     })
+      //     .to('.line1', {
+      //       opacity: 1,
+      //       y: 0,
+      //       delay: 3,
+      //     })
+      //     .to('.line1', { opacity: 0, y: -36, rotateX: -80 }, '>+=3')
+      //     .to(
+      //       '.line2',
+      //       {
+      //         opacity: 1,
+      //         y: 0,
+      //         rotateX: 0,
+      //       },
+      //       '<',
+      //     )
+      //     .fromTo(
+      //       '.card',
+      //       { opacity: 0.5 },
+      //       {
+      //         opacity: 0.05,
+      //         filter: 'grayscale(100)',
+      //       },
+      //     )
+      //     .to(
+      //       '.fav',
+      //       {
+      //         opacity: 1,
+      //         filter: 'grayscale(0)',
+      //       },
+      //       '<',
+      //     );
+      // });
 
-      mm.add('(min-width:641px)', () => {
+      mm.add('(min-width:0px)', () => {
         gsap
           .timeline({
             scrollTrigger: {
               trigger: '.first-subsection',
-              start: 'top top+=200',
+              start: 'top top+=100',
               pin: true,
               scrub: 1,
               end: '+=2000',
@@ -105,7 +105,6 @@ function Experience() {
           .to('.line1', {
             opacity: 1,
             y: 0,
-            ease: 'power4.out',
           })
           .to('.line1', { opacity: 0, x: -200, filter: 'blur(20px)' }, '>+=0.5')
           .to(
@@ -134,7 +133,7 @@ function Experience() {
             },
             '<',
           )
-          .fromTo('.heading', { opacity: 1 }, { opacity: 1, duration: 0.5 });
+          .fromTo(null, { opacity: 1 }, { opacity: 1, duration: 0.5 });
       });
     },
     { scope: experienceRef },
@@ -146,16 +145,18 @@ function Experience() {
       ref={experienceRef}
       className="experience relative w-full max-w-full gap-0 overflow-x-visible max-sm:px-0"
     >
-      <DisplayMsg
-        className="heading z-50 flex translate-y-8 opacity-0 max-sm:ml-[var(--responsive-gutter-width)]"
-        categoryClassName="text-orange-400"
-        category="Experience"
-      >
-        <h2>Technologies</h2>
-      </DisplayMsg>
+      <div className="heading-pin">
+        <DisplayMsg
+          className="heading z-50 flex translate-y-8 opacity-0 max-sm:ml-[var(--responsive-gutter-width)]"
+          categoryClassName="text-orange-400"
+          category="Experience"
+        >
+          <h2>Technologies</h2>
+        </DisplayMsg>
+      </div>
       <div className="first-subsection-pin">
         <div className="first-subsection relative min-h-[95svh] w-full sm:min-h-[70vh]">
-          <div className="col sm:absolute-center z-10 flex w-full max-sm:absolute max-sm:bottom-0">
+          <div className="col sm:absolute-center z-10 flex w-full max-sm:absolute max-sm:bottom-20">
             <DisplayMsg className="line1 translate-y-10 opacity-0">
               <p className="bg-linear-to-t from-transparent via-cyan-50 to-transparent text-5xl leading-[1.2] font-bold max-sm:px-[var(--responsive-gutter-width)] max-sm:text-3xl sm:py-32 xl:text-center">
                 Over the past few years, I&apos;ve worked <br /> with a wide
@@ -171,7 +172,7 @@ function Experience() {
               </p>
             </DisplayMsg>
           </div>
-          <div className="wheels sm:absolute-center relative col-span-2 row-span-2 w-[min(100%,43rem)] overflow-hidden max-sm:-mt-16">
+          <div className="wheels sm:absolute-center relative col-span-2 row-span-2 w-[min(100%,43rem)] overflow-hidden max-sm:-translate-y-16">
             <SmallWheelLogos />
             <BigWheelLogos />
           </div>
