@@ -25,29 +25,21 @@ function Intro() {
             end: '+=2000',
             scrub: 1,
             pin: true,
-            markers: false,
           },
         })
         .to('.intro > div', { opacity: 1, y: 0, duration: 1.5, stagger: 10 })
-        .fromTo('.showcase', { opacity: 1 }, { opacity: 1, duration: 10 });
-      // gsap.timeline({
-      //   scrollTrigger: {
-      //     trigger: '.intro-pin',
-      //     start:
-      //       window.innerWidth > 640 ? 'top center-=300' : 'top center-=200',
-      //     end: '+=2000',
-      //     pin: true,
-      //     markers: false,
-      //   },
-      // });
+        .fromTo(
+          document.body,
+          { objectFit: 'contain' },
+          { objectFit: 'contain', duration: 10 },
+        );
 
       gsap
         .timeline({
           scrollTrigger: {
             trigger: '.heading',
-            start: 'top bottom+=100',
-            toggleActions: 'restart none none none',
-            markers: false,
+            start: 'top bottom-=100',
+            toggleActions: 'play none none reset',
           },
         })
         .to('.heading', { opacity: 1, y: 0, duration: 0.5 })
