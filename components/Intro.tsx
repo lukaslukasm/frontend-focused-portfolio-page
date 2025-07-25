@@ -21,24 +21,25 @@ function Intro() {
         .timeline({
           scrollTrigger: {
             trigger: '.intro',
-            start:
-              window.innerWidth > 640 ? 'top center-=300' : 'top center-=100',
-            end: '+=1500',
+            start: 'top top+=200',
+            end: '+=2000',
             scrub: 1,
+            pin: true,
             markers: false,
           },
         })
-        .to('.intro > div', { opacity: 1, y: 0, duration: 1.5, stagger: 10 });
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: '.intro-pin',
-          start:
-            window.innerWidth > 640 ? 'top center-=300' : 'top center-=200',
-          end: '+=2000',
-          pin: true,
-          markers: false,
-        },
-      });
+        .to('.intro > div', { opacity: 1, y: 0, duration: 1.5, stagger: 10 })
+        .fromTo('.showcase', { opacity: 1 }, { opacity: 1, duration: 10 });
+      // gsap.timeline({
+      //   scrollTrigger: {
+      //     trigger: '.intro-pin',
+      //     start:
+      //       window.innerWidth > 640 ? 'top center-=300' : 'top center-=200',
+      //     end: '+=2000',
+      //     pin: true,
+      //     markers: false,
+      //   },
+      // });
 
       gsap
         .timeline({
@@ -69,22 +70,21 @@ function Intro() {
   return (
     <>
       <section className="" ref={introRef}>
-        <div className="h-[360svh] lg:h-[260svh]">
-          <div className="intro-pin">
-            <div className="intro col mx-auto flex max-w-[1000px] gap-8">
-              <DisplayMsg className="translate-y-8 leading-[1.2] opacity-0 max-sm:text-3xl">
-                After wearing the fullstack hat for 3 years now,
-              </DisplayMsg>
-              <DisplayMsg className="translate-y-8 leading-[1.2] opacity-0 max-sm:text-3xl">
-                I&apos;ve decided to focus on the part that brings me the
-                greatest joy.
-              </DisplayMsg>
-              <DisplayMsg className="text-primary eading-[1.2] translate-y-8 font-black opacity-0 max-sm:text-3xl">
-                The frontend development.
-              </DisplayMsg>
-            </div>
+        <div className="intro-pin">
+          <div className="intro col mx-auto flex max-w-[1000px] gap-8">
+            <DisplayMsg className="translate-y-8 leading-[1.2] opacity-0 max-sm:text-3xl">
+              After wearing the fullstack hat for 3 years now,
+            </DisplayMsg>
+            <DisplayMsg className="translate-y-8 leading-[1.2] opacity-0 max-sm:text-3xl">
+              I&apos;ve decided to focus on the part that brings me the greatest
+              joy.
+            </DisplayMsg>
+            <DisplayMsg className="text-primary eading-[1.2] translate-y-8 font-black opacity-0 max-sm:text-3xl">
+              The frontend development.
+            </DisplayMsg>
           </div>
         </div>
+
         <div
           id="showcase"
           className="col relative flex gap-10 overflow-x-visible overflow-y-hidden sm:gap-20"
