@@ -44,7 +44,7 @@ function ReservationSystemContent() {
         </div>
         <div className="mt-4">
           <LinkButton
-            href="/reservation-system-demo"
+            href="https://reservation-system-demo.lukasm.dev"
             className="mx-auto w-max rounded-full border p-2 px-4 text-sm no-underline"
           >
             Demo
