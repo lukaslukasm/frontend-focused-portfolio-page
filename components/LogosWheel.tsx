@@ -79,10 +79,10 @@ function LogosWheel({
           scale: 0,
           x: 0,
           y: 0,
-          duration: 2,
+          duration: 1,
         })
         .to(cardList, {
-          stagger: 0.15,
+          stagger: 0.07,
           opacity: 0.5,
           scale: 1,
           duration: 1,

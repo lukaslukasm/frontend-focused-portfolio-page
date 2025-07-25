@@ -28,8 +28,8 @@ function Projects() {
         .timeline({
           scrollTrigger: {
             trigger: otherProjectsRef.current,
-            start: 'top bottom+=50',
-            toggleActions: 'restart none none none',
+            start: 'top bottom-=100',
+            toggleActions: 'play none none reset',
           },
         })
         .to('.carousel-slide, .carousel-arrows-nav, .heading', {

@@ -64,9 +64,8 @@ function Footer() {
           paused: true,
           scrollTrigger: {
             trigger: '.heading-footer',
-            start: 'top bottom+=50',
-            end: '+=200',
-            toggleActions: 'restart none none none',
+            start: 'top bottom-=100',
+            toggleActions: 'play none none reset',
           },
         })
         .to('#contact > *', {

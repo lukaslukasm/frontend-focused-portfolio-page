@@ -1,8 +1,8 @@
+'use client';
 import { Tooltip } from 'react-tooltip';
 import '../styles/react-tooltip.css';
 import StatsBubblesView from './StatsBubblesView';
 import { useGSAP } from '@gsap/react';
-import { useRef } from 'react';
 import gsap from 'gsap';
 import DisplayMsg from './DisplayMsg';
 
@@ -12,33 +12,25 @@ import DisplayMsg from './DisplayMsg';
  * Renders static content and dynamic contnent from /data/technologiesUsage.json with layout, styling, and animations.
  */
 function StatsSubSection() {
-  const statsSubsectionRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: statsSubsectionRef.current,
-            start: 'top bottom+=50',
-            toggleActions: 'restart none none none',
-          },
-        })
-        .to('.statsSubsection > div', {
-          y: 0,
-          duration: 0.75,
-          opacity: 1,
-          stagger: 0.2,
-        });
-    },
-    { scope: statsSubsectionRef },
-  );
+  useGSAP(() => {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: '.statsSubsection',
+          start: 'top bottom-=150',
+          toggleActions: 'play none none reset',
+        },
+      })
+      .to('.statsSubsection > div', {
+        y: 0,
+        duration: 0.75,
+        opacity: 1,
+        stagger: 0.2,
+      });
+  });
 
   return (
-    <div
-      ref={statsSubsectionRef}
-      className="statsSubsection max-lg:flex-center mt-24 grid-cols-2 flex-col gap-12 sm:mt-48 lg:grid"
-    >
+    <div className="statsSubsection max-lg:flex-center mt-24 grid-cols-2 flex-col gap-12 sm:mt-48 lg:grid">
       <DisplayMsg
         className="z-50 flex translate-y-8 opacity-0 max-lg:w-full max-sm:px-[var(--responsive-gutter-width)] lg:col-span-2"
         categoryClassName="text-orange-400"
