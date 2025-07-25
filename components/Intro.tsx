@@ -69,7 +69,7 @@ function Intro() {
 
   return (
     <>
-      <section className="" ref={introRef}>
+      <section className="gap-40 lg:gap-60" ref={introRef}>
         <div className="intro-pin">
           <div className="intro col mx-auto flex max-w-[1000px] gap-8">
             <DisplayMsg className="translate-y-8 leading-[1.2] opacity-0 max-sm:text-3xl">
