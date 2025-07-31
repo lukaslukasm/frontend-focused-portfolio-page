@@ -7,9 +7,7 @@ import gsap from 'gsap';
 import { useRef } from 'react';
 import Image from 'next/image';
 import ExpandableCarouselSlide from './ExpandableCarouselSlide';
-import * as Dialog from '@radix-ui/react-dialog';
-import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
-import CarouselSlide from './CarouselSlide';
+
 import WordelContent from '@/content/WordelContent';
 import JewelryWizardContent from '@/content/JewelryWizardContent';
 import ReservationSystemContent from '@/content/ReservationSystemContent';
@@ -133,7 +131,7 @@ function Projects() {
             granular gestures handling.
           </p>
         </ExpandableCarouselSlide>
-        <ExpandableCarouselSlide
+        {/* <ExpandableCarouselSlide
           expandedContent={
             <div className="col flex">
               <VisuallyHidden>
@@ -195,7 +193,7 @@ function Projects() {
               </svg>
             </div>
           </button>
-        </CarouselSlide>
+        </CarouselSlide> */}
       </Carousel>
     </section>
   );
