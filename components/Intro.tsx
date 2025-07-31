@@ -27,7 +27,7 @@ function Intro() {
             pin: true,
           },
         })
-        .to('.intro > div', { opacity: 1, y: 0, duration: 1.5, stagger: 10 })
+        .to('.intro > div', { opacity: 1, y: 0, duration: 1.5, stagger: 20 })
         .fromTo(
           document.body,
           { objectFit: 'contain' },
@@ -97,15 +97,18 @@ function Intro() {
                   fill
                   src="/images/device-mockups/ntb.png"
                   alt="Notebook mockup"
-                  className="object-contain"
+                  className="z-10 object-contain"
                 />
                 <div className="absolute top-[2.5%] right-[13.1%] left-[13.1%] aspect-[16/10.41] overflow-hidden sm:rounded-t-xl">
-                  <Image
+                  {/* <Image
                     alt="dashboard"
                     className="h-full object-contain"
                     fill
                     src="/images/dashboard-placeholder.png"
-                  />
+                  /> */}
+                  <div className="flex-center from-highlight h-full w-full bg-gradient-to-br to-cyan-500 font-bold text-white">
+                    Work in progress
+                  </div>
                 </div>
               </div>
             </div>
