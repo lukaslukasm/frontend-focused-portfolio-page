@@ -17,14 +17,24 @@ function UsedTechSubSection() {
             start: 'top top+=100',
             pin: true,
             scrub: 1,
-            end: '+=2000',
+            snap: { snapTo: 'labels', duration: 2 },
+            end: '+=3000',
+            onToggle: () => {
+              document.querySelector('._2MD0k')?.scrollTo({ top: 0 });
+              console.log('dsf');
+            },
           },
         })
         .to('.line1', {
           opacity: 1,
           y: 0,
         })
-        .to('.line1', { opacity: 0, x: -200, filter: 'blur(20px)' }, '>+=0.5')
+        .addLabel('a')
+        .to(
+          '.line1',
+          { opacity: 0, x: -200, duration: 1, filter: 'blur(20px)' },
+          '>+=1',
+        )
         .to(
           '.line2',
           {
@@ -42,6 +52,7 @@ function UsedTechSubSection() {
             opacity: 0.05,
             filter: 'grayscale(100)',
           },
+          '<',
         )
         .to(
           '.fav',
@@ -51,10 +62,11 @@ function UsedTechSubSection() {
           },
           '<',
         )
+        .addLabel('b')
         .fromTo(
           document.body,
           { objectFit: 'contain' },
-          { objectFit: 'contain', duration: 2 },
+          { objectFit: 'contain', duration: 1 },
         );
     },
     { scope: usedTechRef },
