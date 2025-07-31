@@ -23,7 +23,7 @@ function Experience() {
           trigger: '#experience > .heading-pin',
           pin: true,
           start: 'bottom top+=100',
-          end: '+=2000',
+          end: '+=3000',
         },
       });
 

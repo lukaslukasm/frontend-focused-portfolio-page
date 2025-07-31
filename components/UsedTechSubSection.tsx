@@ -17,7 +17,7 @@ function UsedTechSubSection() {
             start: 'top top+=100',
             pin: true,
             scrub: 1,
-            snap: { snapTo: 'labels', duration: 2 },
+            snap: { snapTo: 'labels', duration: 1 },
             end: '+=3000',
             onToggle: () => {
               document.querySelector('._2MD0k')?.scrollTo({ top: 0 });
