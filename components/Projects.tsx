@@ -10,6 +10,7 @@ import ExpandableCarouselSlide from './ExpandableCarouselSlide';
 import WordelContent from '@/content/WordelContent';
 import JewelryWizardContent from '@/content/JewelryWizardContent';
 import ReservationSystemContent from '@/content/ReservationSystemContent';
+import PortfolioContent from '@/content/PortfolioContent';
 /**
  * Section component for displaying the other selected work.
  *
@@ -130,17 +131,8 @@ function Projects() {
             granular gestures handling.
           </p>
         </ExpandableCarouselSlide>
-        {/* <ExpandableCarouselSlide
-          expandedContent={
-            <div className="col flex">
-              <VisuallyHidden>
-                <Dialog.Title>Klenotnicky Radca</Dialog.Title>
-                <Dialog.Description></Dialog.Description>
-              </VisuallyHidden>
-              <h1>this is the content of expanded carousel slide</h1>
-              <button>button</button>
-            </div>
-          }
+        <ExpandableCarouselSlide
+          expandedContent={<PortfolioContent />}
           btnClassName="bg-green-600 text-bg/80"
         >
           <div className="from-highlight absolute top-0 bottom-0 left-0 -z-10 size-full overflow-hidden rounded-3xl bg-gradient-to-br to-cyan-500"></div>
@@ -156,7 +148,7 @@ function Projects() {
             specialists from those fields can tell.
           </p>
         </ExpandableCarouselSlide>
-        <CarouselSlide>
+        {/* <CarouselSlide>
           <button
             className="col flex size-full cursor-pointer text-left"
             onClick={() => {
