@@ -90,6 +90,7 @@ function WordelContent() {
             alt="Wordel Preview"
             width="400"
             height="1000"
+            loading="eager"
             priority
           />
         </div>

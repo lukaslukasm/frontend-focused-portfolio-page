@@ -75,6 +75,7 @@ function PortfolioContent() {
             width="400"
             height="1000"
             priority
+            loading="eager"
           />
         </div>
       </div>
