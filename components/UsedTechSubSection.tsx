@@ -21,7 +21,6 @@ function UsedTechSubSection() {
             end: '+=3000',
             onToggle: () => {
               document.querySelector('._2MD0k')?.scrollTo({ top: 0 });
-              console.log('dsf');
             },
           },
         })
