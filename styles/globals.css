@@ -97,8 +97,3 @@
 .topic-badge {
   @apply text-base font-black;
 }
-
-.splide__track,
-.splide__track ul {
-  @apply !overflow-visible;
-}
